@@ -5,7 +5,7 @@
 
     public class AttributesDto
     {
-        public AttributesDto(DateTime? lastSeen, NonNegativeInt userId, NonEmptyString userName)
+        public AttributesDto(DateTime? lastSeen, PositiveInt userId, NonEmptyString userName)
             : this()
         {
             LastSeen = lastSeen;
@@ -19,7 +19,7 @@
 
         public DateTime? LastSeen { get; }
 
-        public NonNegativeInt UserId { get; }
+        public PositiveInt UserId { get; }
 
         public NonEmptyString UserName { get; }
     }

@@ -25,9 +25,9 @@
 
             if (!string.IsNullOrEmpty(sessionId))
             {
-                var facade = IoCContainerProvider.GetContainer().Get<IClaimsPrincipalProvider>();
+                var claimsPrincipalProvider = IoCContainerProvider.GetContainer().Get<IClaimsPrincipalProvider>();
 
-                var result = facade.GetClaimsPrincipal((NonEmptyString)sessionId);
+                var result = claimsPrincipalProvider.GetClaimsPrincipal((NonEmptyString)sessionId);
 
                 if (!result.IsFailure)
                 {

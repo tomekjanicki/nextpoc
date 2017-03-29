@@ -25,9 +25,8 @@
 
         public static IResult<Query, NonEmptyString> TryCreate(string sessionId, Guid commandId)
         {
-            Guid guid;
-            var result = Guid.TryParse(sessionId, out guid);
-            return result ? GetOkResult(new Query(guid, commandId)) : GetFailResult((NonEmptyString)("Invalid " + nameof(SessionId)));
+            var sessionIdResult = sessionId.TryParseToGuid((NonEmptyString)nameof(SessionId));
+            return sessionIdResult.OnSuccess(() => GetOkResult(new Query(sessionIdResult.Value, commandId)));
         }
 
         protected override bool EqualsCore(Query other)

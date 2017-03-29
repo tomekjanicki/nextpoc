@@ -88,7 +88,7 @@
 
         private static UserData GetUserData()
         {
-            return new UserData((NonNegativeInt)1, (NonEmptyString)"ln", new List<NonEmptyString> { (NonEmptyString)"Manager", (NonEmptyString)"Finance" }.ToImmutableList());
+            return new UserData((PositiveInt)1, (NonEmptyString)"ln", new List<NonEmptyString> { (NonEmptyString)"Manager", (NonEmptyString)"Finance" }.ToImmutableList());
         }
     }
 }

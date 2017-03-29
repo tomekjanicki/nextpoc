@@ -13,7 +13,7 @@
     {
         private const string GetSessionDataBySessionIdSql = @"
             SELECT 
-	            us.create_date LastSeen,
+                us.create_date LastSeen,
                 us.prod_sys_user_id UserName,
                 u.RowID UserId
             FROM 

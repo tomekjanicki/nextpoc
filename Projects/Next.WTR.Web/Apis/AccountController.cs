@@ -2,11 +2,9 @@
 {
     using System.Linq;
     using System.Web.Http;
-    using Common.Shared;
     using Next.WTR.Common.Infrastructure.Security;
     using Next.WTR.Common.Web.Infrastructure;
     using Next.WTR.Logic.Facades.Apis;
-    using Next.WTR.Types.FunctionalExtensions;
     using Next.WTR.Web.Dtos.Apis.Account.Login;
 
     public sealed class AccountController : BaseWebApiController
@@ -31,8 +29,8 @@
         public IHttpActionResult Logout()
         {
             var sessionId = User.Claims.First(claim => claim.Type == ClaimTypes.SessionId).Value;
-            _accountLogoutFacade.Logout(sessionId);
-            return GetHttpActionResult(Result<Error>.Ok());
+            var result = _accountLogoutFacade.Logout(sessionId);
+            return GetHttpActionResult(result);
         }
     }
 }

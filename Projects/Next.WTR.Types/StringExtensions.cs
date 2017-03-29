@@ -1,5 +1,6 @@
 ﻿namespace Next.WTR.Types
 {
+    using System;
     using Next.WTR.Types.FunctionalExtensions;
     using NullGuard;
 
@@ -13,6 +14,13 @@
         public static string IfNullReplaceWithEmptyString([AllowNull]this string input)
         {
             return input ?? string.Empty;
+        }
+
+        public static IResult<Guid, NonEmptyString> TryParseToGuid(this string guidString, NonEmptyString fieldName)
+        {
+            Guid guid;
+            var result = Guid.TryParse(guidString, out guid);
+            return result ? guid.GetOkMessage() : ((NonEmptyString)("Unable to convert " + fieldName + " to valid guid")).GetFailResult<Guid>();
         }
     }
 }

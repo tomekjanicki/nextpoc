@@ -5,19 +5,14 @@
 
     public class UserData
     {
-        public UserData(NonNegativeInt userId, NonEmptyString userName, ImmutableList<NonEmptyString> groups)
-            : this()
+        public UserData(PositiveInt userId, NonEmptyString userName, ImmutableList<NonEmptyString> groups)
         {
             UserId = userId;
             UserName = userName;
             Groups = groups;
         }
 
-        private UserData()
-        {
-        }
-
-        public NonNegativeInt UserId { get; }
+        public PositiveInt UserId { get; }
 
         public NonEmptyString UserName { get; }
 
