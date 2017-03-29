@@ -7,6 +7,7 @@
     using Next.WTR.Common.Shared;
     using Next.WTR.Logic.CQ.Product.FilterPaged;
     using Next.WTR.Types.FunctionalExtensions;
+    using Next.WTR.Web.Dtos.Apis.Product.FilterPaged;
 
     public sealed class ProductsFilterPagedFacade
     {
@@ -19,11 +20,11 @@
             _mapper = mapper;
         }
 
-        public IResult<Paged<Web.Dtos.Apis.Product.FilterPaged.Product>, Error> FilterPaged(int skip, int top, string filter, string orderBy)
+        public IResult<Paged<ResponseProduct>, Error> FilterPaged(int skip, int top, string filter, string orderBy)
         {
             var queryResult = Query.TryCreate(orderBy, skip, top, filter);
 
-            return Helper.GetItems<Paged<Web.Dtos.Apis.Product.FilterPaged.Product>, Query, Common.ValueObjects.Paged<Product>>(_mediator, _mapper, queryResult);
+            return Helper.GetItems<Paged<ResponseProduct>, Query, Common.ValueObjects.Paged<Product>>(_mediator, _mapper, queryResult);
         }
     }
 }

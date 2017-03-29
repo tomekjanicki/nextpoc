@@ -1,10 +1,10 @@
-﻿namespace Next.WTR.Web.Dtos.Apis.Product.FilterPaged
+﻿namespace Next.WTR.Web.Dtos.Apis.Product.Get
 {
     using System;
 
-    public class Product
+    public class ResponseProduct
     {
-        public Product(int id, string code, string name, decimal price, DateTime? date, bool canDelete, string version)
+        public ResponseProduct(int id, string code, string name, decimal price, DateTime? date, bool canDelete, string version)
         {
             Id = id;
             Code = code;

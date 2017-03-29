@@ -25,13 +25,13 @@
 
                 Console.WriteLine(version);
 
-                await wrapper.AccountLogin(new Data("QC Buyer", "c2869901eb1b0ba90f30001f52191b8d")).ConfigureAwait(false);
+                await wrapper.AccountLogin(new RequestUserIdAndPassword("QC Buyer", "c2869901eb1b0ba90f30001f52191b8d")).ConfigureAwait(false);
 
                 var result = await wrapper.ProductsFilterPaged(0, 10, string.Empty, string.Empty).ConfigureAwait(false);
 
                 Console.WriteLine(result);
 
-                var id = await wrapper.ProductsInsert(new Product(DateTime.Now.ToLongTimeString(), "n", 2m)).ConfigureAwait(false);
+                var id = await wrapper.ProductsInsert(new RequestProduct(DateTime.Now.ToLongTimeString(), "n", 2m)).ConfigureAwait(false);
 
                 Console.WriteLine(id);
 

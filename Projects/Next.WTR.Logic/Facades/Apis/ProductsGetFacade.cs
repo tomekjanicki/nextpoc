@@ -6,6 +6,7 @@
     using Next.WTR.Common.Shared;
     using Next.WTR.Logic.CQ.Product.Get;
     using Next.WTR.Types.FunctionalExtensions;
+    using Next.WTR.Web.Dtos.Apis.Product.Get;
 
     public sealed class ProductsGetFacade
     {
@@ -18,11 +19,11 @@
             _mapper = mapper;
         }
 
-        public IResult<Web.Dtos.Apis.Product.Get.Product, Error> Get(int id)
+        public IResult<ResponseProduct, Error> Get(int id)
         {
             var queryResult = Query.TryCreate(id);
 
-            return Helper.GetItem<Web.Dtos.Apis.Product.Get.Product, Query, Product>(_mediator, _mapper, queryResult);
+            return Helper.GetItem<ResponseProduct, Query, Product>(_mediator, _mapper, queryResult);
         }
     }
 }

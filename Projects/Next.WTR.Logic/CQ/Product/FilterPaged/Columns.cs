@@ -10,10 +10,10 @@
         {
             return new Dictionary<NonEmptyString, NonEmptyString>
             {
-                { (NonEmptyString)nameof(Web.Dtos.Apis.Product.FilterPaged.Product.Id), (NonEmptyString)"ID" },
-                { (NonEmptyString)nameof(Web.Dtos.Apis.Product.FilterPaged.Product.Code), (NonEmptyString)"CODE" },
-                { (NonEmptyString)nameof(Web.Dtos.Apis.Product.FilterPaged.Product.Name), (NonEmptyString)"NAME" },
-                { (NonEmptyString)nameof(Web.Dtos.Apis.Product.FilterPaged.Product.Price), (NonEmptyString)"PRICE" }
+                { (NonEmptyString)nameof(Web.Dtos.Apis.Product.FilterPaged.ResponseProduct.Id), (NonEmptyString)"ID" },
+                { (NonEmptyString)nameof(Web.Dtos.Apis.Product.FilterPaged.ResponseProduct.Code), (NonEmptyString)"CODE" },
+                { (NonEmptyString)nameof(Web.Dtos.Apis.Product.FilterPaged.ResponseProduct.Name), (NonEmptyString)"NAME" },
+                { (NonEmptyString)nameof(Web.Dtos.Apis.Product.FilterPaged.ResponseProduct.Price), (NonEmptyString)"PRICE" }
             }.ToImmutableDictionary();
         }
 

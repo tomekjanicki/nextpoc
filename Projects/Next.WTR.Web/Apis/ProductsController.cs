@@ -31,17 +31,17 @@
         }
 
         [HttpPost]
-        public IHttpActionResult Update(int id, Dtos.Apis.Product.Update.Product product)
+        public IHttpActionResult Update(int id, Dtos.Apis.Product.Update.RequestProduct requestProduct)
         {
-            var result = _productsUpdateFacade.Update(id, product);
+            var result = _productsUpdateFacade.Update(id, requestProduct);
 
             return GetHttpActionResultForUpdate(result);
         }
 
         [HttpPost]
-        public IHttpActionResult Insert(Dtos.Apis.Product.Insert.Product product)
+        public IHttpActionResult Insert(Dtos.Apis.Product.Insert.RequestProduct requestProduct)
         {
-            var result = _productsInsertFacade.Insert(product);
+            var result = _productsInsertFacade.Insert(requestProduct);
 
             return GetHttpActionResult(result);
         }

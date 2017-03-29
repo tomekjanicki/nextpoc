@@ -4,13 +4,12 @@
     using Next.WTR.Logic.Helpers.QueryCommandFactories.Interfaces;
     using Next.WTR.Types;
     using Next.WTR.Types.FunctionalExtensions;
-    using Next.WTR.Web.Dtos.Apis.Account.Login;
 
     public sealed class UserCreateSessionCommandFactory : IUserCreateSessionCommandFactory
     {
-        public IResult<Command, NonEmptyString> Get(Data data)
+        public IResult<Command, NonEmptyString> Get(string userId, string password)
         {
-            return Command.TryCreate(data);
+            return Command.TryCreate(userId, password);
         }
     }
 }

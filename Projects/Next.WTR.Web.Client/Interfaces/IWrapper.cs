@@ -4,6 +4,7 @@
     using Next.WTR.Common.Dtos;
     using Next.WTR.Web.Dtos.Apis.Account.Login;
     using Next.WTR.Web.Dtos.Apis.Product.FilterPaged;
+    using Next.WTR.Web.Dtos.Apis.Product.Insert;
 
     public interface IWrapper
     {
@@ -11,10 +12,10 @@
 
         Task AccountLogout();
 
-        Task AccountLogin(Data data);
+        Task AccountLogin(RequestUserIdAndPassword requestUserIdAndPassword);
 
-        Task<Paged<Product>> ProductsFilterPaged(int skip, int top, string filter, string orderBy);
+        Task<Paged<ResponseProduct>> ProductsFilterPaged(int skip, int top, string filter, string orderBy);
 
-        Task<int> ProductsInsert(Dtos.Apis.Product.Insert.Product product);
+        Task<int> ProductsInsert(RequestProduct requestProduct);
     }
 }

@@ -53,11 +53,11 @@
     <Compile Include="..\..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Apis\Account\Login\Data.cs" />
-    <Compile Include="Apis\Product\FilterPaged\Product.cs" />
-    <Compile Include="Apis\Product\Get\Product.cs" />
-    <Compile Include="Apis\Product\Insert\Product.cs" />
-    <Compile Include="Apis\Product\Update\Product.cs" />
+    <Compile Include="Apis\Account\Login\RequestUserIdAndPassword.cs" />
+    <Compile Include="Apis\Product\FilterPaged\ResponseProduct.cs" />
+    <Compile Include="Apis\Product\Get\ResponseProduct.cs" />
+    <Compile Include="Apis\Product\Insert\RequestProduct.cs" />
+    <Compile Include="Apis\Product\Update\RequestProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

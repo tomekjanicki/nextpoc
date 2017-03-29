@@ -19,9 +19,9 @@
             Dictionary = new Dictionary<NonEmptyLowerCaseString, ImmutableList<NonEmptyLowerCaseString>>
             {
                 { (NonEmptyLowerCaseString)"version/get", anonymous },
-                { (NonEmptyLowerCaseString)"account/login(next.wtr.web.dtos.apis.account.login.data data)", anonymous },
-                { (NonEmptyLowerCaseString)"products/insert(next.wtr.web.dtos.apis.product.insert.product product)", buyerOnly },
-                { (NonEmptyLowerCaseString)"products/update(system.int32 id, next.wtr.web.dtos.apis.product.update.product product)", buyerOnly },
+                { (NonEmptyLowerCaseString)"account/login(next.wtr.web.dtos.apis.account.login.requestuseridandpassword requestuseridandpassword)", anonymous },
+                { (NonEmptyLowerCaseString)"products/insert(next.wtr.web.dtos.apis.product.insert.requestproduct requestproduct)", buyerOnly },
+                { (NonEmptyLowerCaseString)"products/update(system.int32 id, next.wtr.web.dtos.apis.product.update.requestproduct requestproduct)", buyerOnly },
                 { (NonEmptyLowerCaseString)"products/delete(system.int32 id, system.string version)", buyerOnly }
             }.ToImmutableDictionary();
         }

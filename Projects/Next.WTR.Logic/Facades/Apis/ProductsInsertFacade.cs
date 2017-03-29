@@ -20,9 +20,9 @@ namespace Next.WTR.Logic.Facades.Apis
             _mapper = mapper;
         }
 
-        public IResult<int, Error> Insert(Product product)
+        public IResult<int, Error> Insert(RequestProduct requestProduct)
         {
-            var commandResult = Command.TryCreate(product.Name.IfNullReplaceWithEmptyString(), product.Code.IfNullReplaceWithEmptyString(), product.Price);
+            var commandResult = Command.TryCreate(requestProduct.Name, requestProduct.Code, requestProduct.Price);
 
             return Helper.Insert<int, Command, PositiveInt>(_mediator, _mapper, commandResult);
         }

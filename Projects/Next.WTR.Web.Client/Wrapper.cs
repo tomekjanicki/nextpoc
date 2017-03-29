@@ -10,6 +10,7 @@
     using Next.WTR.Web.Client.Interfaces;
     using Next.WTR.Web.Dtos.Apis.Account.Login;
     using Next.WTR.Web.Dtos.Apis.Product.FilterPaged;
+    using Next.WTR.Web.Dtos.Apis.Product.Insert;
 
     public sealed class Wrapper : IWrapper
     {
@@ -43,19 +44,19 @@
             }
         }
 
-        public async Task AccountLogin(Data data)
+        public async Task AccountLogin(RequestUserIdAndPassword requestUserIdAndPassword)
         {
             _userIdWithPath = null;
             using (var client = GetHttpClient())
             {
-                var httpResponseMessage = await client.PostAsJsonAsync(GetFullUri(_baseUri, "account/login"), data).ConfigureAwait(false);
+                var httpResponseMessage = await client.PostAsJsonAsync(GetFullUri(_baseUri, "account/login"), requestUserIdAndPassword).ConfigureAwait(false);
                 httpResponseMessage.EnsureSuccessStatusCode();
                 var cookies = httpResponseMessage.Headers.GetValues("Set-Cookie");
                 _userIdWithPath = GetUserIdAndPath(cookies);
             }
         }
 
-        public async Task<Paged<Product>> ProductsFilterPaged(int skip, int top, string filter, string orderBy)
+        public async Task<Paged<ResponseProduct>> ProductsFilterPaged(int skip, int top, string filter, string orderBy)
         {
             using (var client = GetHttpClient())
             {
@@ -68,16 +69,16 @@
                 };
                 var httpResponseMessage = await client.GetAsync(GetFullUri(_baseUri, "products/filterpaged", pars)).ConfigureAwait(false);
                 httpResponseMessage.EnsureSuccessStatusCode();
-                var result = await httpResponseMessage.Content.ReadAsAsync<Paged<Product>>().ConfigureAwait(false);
+                var result = await httpResponseMessage.Content.ReadAsAsync<Paged<ResponseProduct>>().ConfigureAwait(false);
                 return result;
             }
         }
 
-        public async Task<int> ProductsInsert(Dtos.Apis.Product.Insert.Product product)
+        public async Task<int> ProductsInsert(RequestProduct requestProduct)
         {
             using (var client = GetHttpClient())
             {
-                var httpResponseMessage = await client.PostAsJsonAsync(GetFullUri(_baseUri, "products/insert"), product).ConfigureAwait(false);
+                var httpResponseMessage = await client.PostAsJsonAsync(GetFullUri(_baseUri, "products/insert"), requestProduct).ConfigureAwait(false);
                 httpResponseMessage.EnsureSuccessStatusCode();
                 var result = await httpResponseMessage.Content.ReadAsAsync<int>().ConfigureAwait(false);
                 return result;

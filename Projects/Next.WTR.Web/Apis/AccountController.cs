@@ -19,9 +19,9 @@
         }
 
         [HttpPost]
-        public IHttpActionResult Login(Data data)
+        public IHttpActionResult Login(RequestUserIdAndPassword requestUserIdAndPassword)
         {
-            var result = _accountLoginFacade.Login(data);
+            var result = _accountLoginFacade.Login(requestUserIdAndPassword);
             return GetHttpActionResult(result);
         }
 

@@ -4,7 +4,6 @@ namespace Next.WTR.Logic.Facades.Apis
     using Next.WTR.Common.Handlers.Interfaces;
     using Next.WTR.Common.Shared;
     using Next.WTR.Logic.CQ.Product.Update;
-    using Next.WTR.Types;
     using Next.WTR.Types.FunctionalExtensions;
     using Next.WTR.Web.Dtos.Apis.Product.Update;
 
@@ -17,9 +16,9 @@ namespace Next.WTR.Logic.Facades.Apis
             _mediator = mediator;
         }
 
-        public IResult<Error> Update(int id, Product product)
+        public IResult<Error> Update(int id, RequestProduct requestProduct)
         {
-            var commandResult = Command.TryCreate(id, product.Version.IfNullReplaceWithEmptyString(), product.Price, product.Name.IfNullReplaceWithEmptyString());
+            var commandResult = Command.TryCreate(id, requestProduct.Version, requestProduct.Price, requestProduct.Name);
 
             return Helper.Update(_mediator, commandResult);
         }

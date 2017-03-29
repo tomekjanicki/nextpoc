@@ -6,6 +6,7 @@
     using Next.WTR.Logic.CQ.Product.ValueObjects;
     using Next.WTR.Logic.Mappings;
     using Next.WTR.Types;
+    using Next.WTR.Web.Dtos.Apis.Product.Get;
     using NUnit.Framework;
     using Shouldly;
 
@@ -27,7 +28,7 @@
             const string name = "name";
             const decimal price = 5.22M;
             var source = new Product((PositiveInt)id, (Code)code, (Name)name, (NonNegativeDecimal)price, null, true, new byte[] { 1 });
-            var result = _mapper.Map<Web.Dtos.Apis.Product.Get.Product>(source);
+            var result = _mapper.Map<ResponseProduct>(source);
             result.Id.ShouldBe(id);
             result.Code.ShouldBe(code);
             result.Name.ShouldBe(name);

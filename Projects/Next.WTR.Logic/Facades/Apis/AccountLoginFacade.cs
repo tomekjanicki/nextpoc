@@ -22,9 +22,9 @@
             _createSessionCommandFactory = createSessionCommandFactory;
         }
 
-        public IResult<Error> Login(Data data)
+        public IResult<Error> Login(RequestUserIdAndPassword requestUserIdAndPassword)
         {
-            var commandResult = _createSessionCommandFactory.Get(data);
+            var commandResult = _createSessionCommandFactory.Get(requestUserIdAndPassword.UserId, requestUserIdAndPassword.Password);
 
             return commandResult.OnSuccess(() => GetResult(commandResult.Value), Error.CreateGeneric);
         }

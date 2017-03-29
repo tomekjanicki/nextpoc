@@ -8,7 +8,6 @@
     using Next.WTR.Common.Shared;
     using Next.WTR.Types;
     using Next.WTR.Types.FunctionalExtensions;
-    using Next.WTR.Web.Dtos.Apis.Account.Login;
 
     public sealed class Command : BaseCommandQuery<Command>, IRequest<IResult<Guid, Error>>
     {
@@ -23,15 +22,15 @@
 
         public NonEmptyString Password { get; }
 
-        public static IResult<Command, NonEmptyString> TryCreate(Data data)
+        public static IResult<Command, NonEmptyString> TryCreate(string userId, string password)
         {
-            return TryCreate(data, Guid.NewGuid());
+            return TryCreate(userId, password, Guid.NewGuid());
         }
 
-        public static IResult<Command, NonEmptyString> TryCreate(Data data, Guid commandId)
+        public static IResult<Command, NonEmptyString> TryCreate(string userId, string password, Guid commandId)
         {
-            var userIdResult = NonEmptyString.TryCreate(data.UserId, (NonEmptyString)nameof(UserId));
-            var passwordResult = NonEmptyString.TryCreate(data.Password, (NonEmptyString)nameof(Password));
+            var userIdResult = NonEmptyString.TryCreate(userId, (NonEmptyString)nameof(UserId));
+            var passwordResult = NonEmptyString.TryCreate(password, (NonEmptyString)nameof(Password));
 
             var result = new IResult<NonEmptyString>[]
             {
