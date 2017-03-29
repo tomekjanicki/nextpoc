@@ -1,5 +1,7 @@
 ﻿namespace Next.WTR.Logic.Facades.Apis
 {
+    using System;
+    using Next.WTR.Common.Facades;
     using Next.WTR.Common.Handlers.Interfaces;
     using Next.WTR.Common.Security.Interfaces;
     using Next.WTR.Common.Shared;
@@ -26,14 +28,7 @@
         {
             var commandResult = _createSessionCommandFactory.Get(requestUserIdAndPassword.UserId, requestUserIdAndPassword.Password);
 
-            return commandResult.OnSuccess(() => GetResult(commandResult.Value), Error.CreateGeneric);
-        }
-
-        private IResult<Error> GetResult(Command command)
-        {
-            var result = _mediator.Send(command);
-
-            return result.IsSuccess ? Result<Error>.Ok().Tee(r => _authenticationService.SignIn((NonEmptyString)result.Value.ToString())) : result;
+            return Helper.Execute<Command, Guid>(_mediator, commandResult, (command, sessionId) => _authenticationService.SignIn((NonEmptyString)sessionId.ToString()));
         }
     }
 }

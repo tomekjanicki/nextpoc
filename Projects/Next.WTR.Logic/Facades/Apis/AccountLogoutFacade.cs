@@ -1,9 +1,9 @@
 ﻿namespace Next.WTR.Logic.Facades.Apis
 {
+    using Next.WTR.Common.Facades;
     using Next.WTR.Common.Handlers.Interfaces;
     using Next.WTR.Common.Security.Interfaces;
     using Next.WTR.Common.Shared;
-    using Next.WTR.Logic.CQ.User.DeleteSession;
     using Next.WTR.Logic.Helpers.QueryCommandFactories.Interfaces;
     using Next.WTR.Types.FunctionalExtensions;
 
@@ -23,14 +23,8 @@
         public IResult<Error> Logout(string sessionId)
         {
             var commandResult = _userDeleteSessionCommandFactory.TryCreate(sessionId);
-            return commandResult.OnSuccess(() => GetResult(commandResult.Value), Error.CreateGeneric);
-        }
 
-        private IResult<Error> GetResult(Command command)
-        {
-            _mediator.Send(command);
-            _authenticationService.SignOut();
-            return Result<Error>.Ok();
+            return Helper.Execute(_mediator, commandResult, command => _authenticationService.SignOut());
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿namespace Next.WTR.Common.Facades
 {
+    using System;
     using AutoMapper;
     using Next.WTR.Common.Handlers.Interfaces;
     using Next.WTR.Common.Shared;
@@ -58,9 +59,37 @@
             return GetItem<TDto, TCommand, TObject>(mediator, mapper, commandResult);
         }
 
+        public static IResult<Error> Execute<TCommand, TResult>(IMediator mediator, IResult<TCommand, NonEmptyString> commandResult, Action<TCommand, TResult> actionAfterExecutingCommand)
+            where TCommand : IRequest<IResult<TResult, Error>>
+        {
+            return commandResult.OnSuccess(command => Execute(command, mediator, actionAfterExecutingCommand), Error.CreateGeneric);
+        }
+
+        public static IResult<Error> Execute<TCommand>(IMediator mediator, IResult<TCommand, NonEmptyString> commandResult, Action<TCommand> actionAfterExecutingCommand)
+            where TCommand : IRequest
+        {
+            return commandResult.OnSuccess(command => Execute(command, mediator, actionAfterExecutingCommand), Error.CreateGeneric);
+        }
+
         private static IResult<TDto, Error> GetMappedResult<TDto, TObject>(TObject obj, IMapper mapper)
         {
             return Result<TDto, Error>.Ok(mapper.Map<TDto>(obj));
+        }
+
+        private static IResult<Error> Execute<TCommand, TResult>(TCommand command, IMediator mediator, Action<TCommand, TResult> actionAfterExecutingCommand)
+            where TCommand : IRequest<IResult<TResult, Error>>
+        {
+            var result = mediator.Send(command);
+
+            return result.IsSuccess ? Result<Error>.Ok().Tee(r => actionAfterExecutingCommand(command, result.Value)) : result;
+        }
+
+        private static IResult<Error> Execute<TCommand>(TCommand command, IMediator mediator, Action<TCommand> actionAfterExecutingCommand)
+            where TCommand : IRequest
+        {
+            mediator.Send(command);
+
+            return Result<Error>.Ok().Tee(r => actionAfterExecutingCommand(command));
         }
     }
 }
