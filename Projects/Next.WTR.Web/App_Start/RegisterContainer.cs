@@ -9,7 +9,6 @@
     using Common.Cache.Interfaces;
     using Common.Handlers;
     using Common.Handlers.Interfaces;
-    using Common.IoC;
     using Common.Mappings;
     using Common.Shared.TemplateMethods.Commands.Interfaces;
     using Common.Shared.TemplateMethods.Queries.Interfaces;
@@ -40,8 +39,6 @@
             container.Verify();
 
             configuration.DependencyResolver = new SimpleInjectorWebApiDependencyResolver(container);
-
-            IoCContainerProvider.SetContainer(new IoCContainer(container));
         }
 
         private static void RegisterSingletons(Container container)
@@ -58,8 +55,6 @@
             container.RegisterSingleton<Logic.CQ.Product.Delete.Interfaces.IRepository, Logic.CQ.Product.Delete.Repository>();
             container.RegisterSingleton<IUpdateRepository<Logic.CQ.Product.Update.Command>, Logic.CQ.Product.Update.Repository>();
             container.RegisterSingleton<Logic.CQ.Product.Insert.Interfaces.IRepository, Logic.CQ.Product.Insert.Repository>();
-            container.RegisterSingleton<Logic.CQ.User.CreateSession.Interfaces.IRepository, Logic.CQ.User.CreateSession.Repository>();
-            container.RegisterSingleton<Logic.CQ.User.GetData.Interfaces.IRepository, Logic.CQ.User.GetData.Repository>();
             container.RegisterSingleton<IGetRepository<Logic.CQ.Product.Get.Product>, Logic.CQ.Product.Get.Repository>();
             var concreteTypes = GetConcreteTypes();
             concreteTypes.ForEach(type => container.RegisterSingleton(type, type));

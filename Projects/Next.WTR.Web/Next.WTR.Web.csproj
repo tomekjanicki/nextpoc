@@ -216,7 +216,6 @@
     <Compile Include="App_Start\RegisterContainer.cs" />
     <Compile Include="App_Start\RegisterWebApiMiscs.cs" />
     <Compile Include="App_Start\RegisterWebApiRoutes.cs" />
-    <Compile Include="Infrastructure\IoCContainer.cs" />
     <Compile Include="Infrastructure\EntryAssemblyProvider.cs" />
     <Compile Include="Apis\ProductsController.cs" />
     <Compile Include="Apis\VersionController.cs" />

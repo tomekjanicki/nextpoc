@@ -145,9 +145,6 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Facades\Helper.cs" />
-    <Compile Include="Infrastructure\Security\ClaimTypes.cs" />
-    <Compile Include="IoC\Interfaces\IIoCContainer.cs" />
-    <Compile Include="IoC\IoCContainerProvider.cs" />
     <Compile Include="Mappings\Helper.cs" />
     <Compile Include="Mappings\TypeConverters\ImmutableListConverter.cs" />
     <Compile Include="Mappings\TypeConverters\MaybeClassToClassConvert.cs" />
