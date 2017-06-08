@@ -22,7 +22,7 @@
             var actionResult = WebApiControllerHelper.GetHttpActionResult(result, GetController());
             var okNegotiatedContentResult = actionResult as OkNegotiatedContentResult<string>;
             okNegotiatedContentResult.ShouldNotBeNull();
-            okNegotiatedContentResult?.Content.ShouldBe(content);
+            okNegotiatedContentResult.Content.ShouldBe(content);
         }
 
         [Test]
@@ -33,7 +33,7 @@
             var actionResult = WebApiControllerHelper.GetHttpActionResult(result, GetController());
             var badRequestErrorMessageResult = actionResult as BadRequestErrorMessageResult;
             badRequestErrorMessageResult.ShouldNotBeNull();
-            badRequestErrorMessageResult?.Message.ShouldBe(error);
+            badRequestErrorMessageResult.Message.ShouldBe(error);
         }
 
         [Test]
@@ -43,7 +43,7 @@
             var actionResult = WebApiControllerHelper.GetHttpActionResult(result, GetController());
             var notFoundResult = actionResult as StatusCodeTextPlainActionResult;
             notFoundResult.ShouldNotBeNull();
-            notFoundResult?.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            notFoundResult.StatusCode.ShouldBe(HttpStatusCode.NotFound);
         }
 
         [Test]
@@ -53,7 +53,7 @@
             var actionResult = WebApiControllerHelper.GetHttpActionResult(result, GetController());
             var statusCodeResult = actionResult as StatusCodeTextPlainActionResult;
             statusCodeResult.ShouldNotBeNull();
-            statusCodeResult?.StatusCode.ShouldBe(HttpStatusCode.PreconditionFailed);
+            statusCodeResult.StatusCode.ShouldBe(HttpStatusCode.PreconditionFailed);
         }
 
         [Test]
@@ -63,7 +63,7 @@
             var actionResult = WebApiControllerHelper.GetHttpActionResultForDelete(result, GetController());
             var statusCodeResult = actionResult as StatusCodeResult;
             statusCodeResult.ShouldNotBeNull();
-            statusCodeResult?.StatusCode.ShouldBe(HttpStatusCode.NoContent);
+            statusCodeResult.StatusCode.ShouldBe(HttpStatusCode.NoContent);
         }
 
         [Test]
@@ -74,7 +74,7 @@
             var actionResult = WebApiControllerHelper.GetHttpActionResultForDelete(result, GetController());
             var badRequestErrorMessageResult = actionResult as BadRequestErrorMessageResult;
             badRequestErrorMessageResult.ShouldNotBeNull();
-            badRequestErrorMessageResult?.Message.ShouldBe(error);
+            badRequestErrorMessageResult.Message.ShouldBe(error);
         }
 
         [Test]
@@ -84,7 +84,7 @@
             var actionResult = WebApiControllerHelper.GetHttpActionResultForDelete(result, GetController());
             var notFoundResult = actionResult as StatusCodeTextPlainActionResult;
             notFoundResult.ShouldNotBeNull();
-            notFoundResult?.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            notFoundResult.StatusCode.ShouldBe(HttpStatusCode.NotFound);
         }
 
         [Test]
@@ -94,7 +94,7 @@
             var actionResult = WebApiControllerHelper.GetHttpActionResultForDelete(result, GetController());
             var statusCodeResult = actionResult as StatusCodeTextPlainActionResult;
             statusCodeResult.ShouldNotBeNull();
-            statusCodeResult?.StatusCode.ShouldBe(HttpStatusCode.PreconditionFailed);
+            statusCodeResult.StatusCode.ShouldBe(HttpStatusCode.PreconditionFailed);
         }
 
         [Test]
@@ -114,7 +114,7 @@
             var actionResult = WebApiControllerHelper.GetHttpActionResultForUpdate(result, GetController());
             var badRequestErrorMessageResult = actionResult as BadRequestErrorMessageResult;
             badRequestErrorMessageResult.ShouldNotBeNull();
-            badRequestErrorMessageResult?.Message.ShouldBe(error);
+            badRequestErrorMessageResult.Message.ShouldBe(error);
         }
 
         [Test]
@@ -124,7 +124,7 @@
             var actionResult = WebApiControllerHelper.GetHttpActionResultForUpdate(result, GetController());
             var notFoundResult = actionResult as StatusCodeTextPlainActionResult;
             notFoundResult.ShouldNotBeNull();
-            notFoundResult?.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            notFoundResult.StatusCode.ShouldBe(HttpStatusCode.NotFound);
         }
 
         [Test]
@@ -134,7 +134,7 @@
             var actionResult = WebApiControllerHelper.GetHttpActionResultForUpdate(result, GetController());
             var statusCodeResult = actionResult as StatusCodeTextPlainActionResult;
             statusCodeResult.ShouldNotBeNull();
-            statusCodeResult?.StatusCode.ShouldBe(HttpStatusCode.PreconditionFailed);
+            statusCodeResult.StatusCode.ShouldBe(HttpStatusCode.PreconditionFailed);
         }
 
         private static ApiController GetController()

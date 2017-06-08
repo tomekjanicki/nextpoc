@@ -135,9 +135,9 @@ namespace Next.WTR.Common.Database
 
         public class WhereResult
         {
-            internal WhereResult(string @where, DynamicParameters parameters)
+            internal WhereResult(string where, DynamicParameters parameters)
             {
-                Where = @where;
+                Where = where;
                 Parameters = parameters;
             }
 

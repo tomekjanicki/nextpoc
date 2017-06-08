@@ -42,7 +42,7 @@
         {
             var query = Substitute.For<IRequest>();
 
-            var mediator = new Mediator(type => { throw new Exception(); });
+            var mediator = new Mediator(type => throw new Exception());
 
             Action a = () => mediator.Send(query);
 
