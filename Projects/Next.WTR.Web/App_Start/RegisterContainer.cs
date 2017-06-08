@@ -13,7 +13,9 @@
     using Common.Tools;
     using Common.Tools.Interfaces;
     using Infrastructure;
-    using Logic.CQ.Product;
+    using Logic.CQ.Customer;
+    using Logic.CQ.Customer.Delete.Interfaces;
+    using Logic.CQ.Customer.Get;
     using Logic.Database;
     using Logic.Database.Interfaces;
     using Logic.Facades.Apis;
@@ -21,6 +23,8 @@
     using SimpleInjector;
     using SimpleInjector.Integration.WebApi;
     using SimpleInjector.Lifestyles;
+    using Command = Logic.CQ.Customer.Update.Command;
+    using Repository = Logic.CQ.Customer.Delete.Repository;
 
     public static class RegisterContainer
     {
@@ -44,10 +48,10 @@
         private static void RegisterScoped(Container container)
         {
             var lifeStyle = Lifestyle.Scoped;
-            container.Register<Logic.CQ.Product.Delete.Interfaces.IRepository, Logic.CQ.Product.Delete.Repository>(lifeStyle);
-            container.Register<IUpdateRepository<Logic.CQ.Product.Update.Command>, Logic.CQ.Product.Update.Repository>(lifeStyle);
-            container.Register<Logic.CQ.Product.Insert.Interfaces.IRepository, Logic.CQ.Product.Insert.Repository>(lifeStyle);
-            container.Register<IGetRepository<Logic.CQ.Product.Get.Product>, Logic.CQ.Product.Get.Repository>(lifeStyle);
+            container.Register<IRepository, Repository>(lifeStyle);
+            container.Register<IUpdateRepository<Command>, Logic.CQ.Customer.Update.Repository>(lifeStyle);
+            container.Register<Logic.CQ.Customer.Insert.Interfaces.IRepository, Logic.CQ.Customer.Insert.Repository>(lifeStyle);
+            container.Register<IGetRepository<Customer>, Logic.CQ.Customer.Get.Repository>(lifeStyle);
             var concreteTypes = GetConcreteTypes();
             concreteTypes.ForEach(type => container.Register(type, type, lifeStyle));
             var assemblies = GetAssemblies();
@@ -69,12 +73,12 @@
         {
             return new List<Type>
             {
-                typeof(ProductsFilterPagedFacade),
-                typeof(ProductsGetFacade),
+                typeof(CustomersFilterPagedFacade),
+                typeof(CustomersGetFacade),
                 typeof(VersionGetFacade),
-                typeof(ProductsDeleteFacade),
-                typeof(ProductsPutFacade),
-                typeof(ProductsPostFacade),
+                typeof(CustomersDeleteFacade),
+                typeof(CustomersPutFacade),
+                typeof(CustomersPostFacade),
                 typeof(SharedQueries)
             }.ToImmutableList();
         }

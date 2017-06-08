@@ -5,7 +5,8 @@
     using AutoMapper;
     using Common.Dtos;
     using Common.Mappings.TypeConverters;
-    using Web.Dtos.Apis.Product.FilterPaged;
+    using CQ.Customer.FilterPaged;
+    using Web.Dtos.Apis.Customer.FilterPaged;
 
     public static class AutoMapperConfiguration
     {
@@ -14,8 +15,8 @@
             expression.CreateMap(typeof(Common.ValueObjects.Paged<>), typeof(Paged<>)).ConvertUsing(typeof(PagedConverter<,>));
             expression.CreateMap(typeof(IEnumerable<>), typeof(ImmutableList<>)).ConvertUsing(typeof(ImmutableListConverter<,>));
 
-            expression.CreateMap<CQ.Product.FilterPaged.Product, ResponseProduct>();
-            expression.CreateMap<CQ.Product.Get.Product, Web.Dtos.Apis.Product.Get.ResponseProduct>();
+            expression.CreateMap<Customer, ResponseCustomer>();
+            expression.CreateMap<CQ.Customer.Get.Customer, Web.Dtos.Apis.Customer.Get.ResponseCustomer>();
         }
     }
 }

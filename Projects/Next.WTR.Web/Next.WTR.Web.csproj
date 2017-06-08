@@ -217,7 +217,7 @@
     <Compile Include="App_Start\RegisterWebApiMiscs.cs" />
     <Compile Include="App_Start\RegisterWebApiRoutes.cs" />
     <Compile Include="Infrastructure\EntryAssemblyProvider.cs" />
-    <Compile Include="Apis\ProductsController.cs" />
+    <Compile Include="Apis\CustomersController.cs" />
     <Compile Include="Apis\VersionController.cs" />
     <Compile Include="Infrastructure\GlobalWebApiExceptionLogger.cs" />
     <Compile Include="Infrastructure\GlobalHttpModule.cs" />
