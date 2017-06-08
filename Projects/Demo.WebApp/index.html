@@ -7,14 +7,15 @@
 </head>
 <body>
     <div data-bind="visible: listVisible">
-        <input type="button" data-bind="click: testClick" />
-        <table>
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Name</th>
                     <th>Surname</th>
                     <th>Phone Number</th>
                     <th>Address</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody data-bind="foreach: customers">
@@ -23,11 +24,32 @@
                     <td data-bind="text: surname"></td>
                     <td data-bind="text: phoneNumber"></td>
                     <td data-bind="text: address"></td>
+                    <td><input type="button" class="btn btn-info" value="Edit" data-bind="click: $parent.editCustomer"></td>
+                    <td><input type="button" class="btn btn-info" value="Delete" data-bind="click: $parent.deleteCustomer"></td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div data-bind="visible: insertOrUpdateVisible" style="display: none">
+        <input type="button" class="btn btn-info" value="Back To List" data-bind="click: backToList">
+        <table class="table table-bordered" data-bind="if: insertOrUpdateVisible">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" data-bind="value: customer().name" /></td>
+            </tr>
+            <tr>
+                <td>Surname</td>
+                <td><input type="text" data-bind="value: customer().surname" /></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="text" data-bind="value: customer().phoneNumber" /></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" data-bind="value: customer().address" /></td>
+            </tr>
+        </table>
     </div>
     <script src="Scripts/jquery-3.1.1.js"></script>
     <script src="Scripts/knockout-3.4.2.debug.js"></script>
