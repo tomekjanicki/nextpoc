@@ -71,7 +71,6 @@
     <Compile Include="..\..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Cache\CacheProviderTests.cs" />
     <Compile Include="Database\CommandHelperTests.cs" />
     <Compile Include="Facades\HelperTests.cs" />
     <Compile Include="Handlers\MediatorTests.cs" />

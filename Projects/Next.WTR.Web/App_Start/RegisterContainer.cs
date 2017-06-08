@@ -5,8 +5,6 @@
     using System.Collections.Immutable;
     using System.Reflection;
     using System.Web.Http;
-    using Common.Cache;
-    using Common.Cache.Interfaces;
     using Common.Handlers;
     using Common.Handlers.Interfaces;
     using Common.Mappings;
@@ -48,7 +46,6 @@
             container.RegisterSingleton<IAssemblyVersionProvider, AssemblyVersionProvider>();
             container.RegisterSingleton<IDbConnectionProvider, DbConnectionProvider>();
             container.RegisterSingleton<IEntryAssemblyProvider, EntryAssemblyProvider>();
-            container.RegisterSingleton<ICacheProvider, CacheProvider>();
             container.RegisterSingleton(() => Helper.GetMapper(AutoMapperConfiguration.Configure));
 
             // todo consider go back to scoped lifestyle

@@ -152,8 +152,6 @@
     <Compile Include="Mappings\TypeConverters\PagedConverter.cs" />
     <Compile Include="Mappings\TypeConverters\StructToMaybeClassConvert.cs" />
     <Compile Include="Partitioner.cs" />
-    <Compile Include="Cache\CacheProvider.cs" />
-    <Compile Include="Cache\Interfaces\ICacheProvider.cs" />
     <Compile Include="Const.cs" />
     <Compile Include="CQ\BaseCommandQuery.cs" />
     <Compile Include="Database\CommandHelper.cs" />
