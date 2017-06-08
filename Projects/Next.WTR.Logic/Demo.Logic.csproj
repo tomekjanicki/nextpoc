@@ -114,21 +114,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Next.WTR.Common.Dtos\Next.WTR.Common.Dtos.csproj">
+    <ProjectReference Include="..\Next.WTR.Common.Dtos\Demo.Common.Dtos.csproj">
       <Project>{01e0946a-2e00-431f-903a-b0f101422227}</Project>
-      <Name>Next.WTR.Common.Dtos</Name>
+      <Name>Demo.Common.Dtos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Next.WTR.Common\Next.WTR.Common.csproj">
+    <ProjectReference Include="..\Next.WTR.Common\Demo.Common.csproj">
       <Project>{B97EFB86-FB8B-43B7-9892-D4E2AF7257B6}</Project>
-      <Name>Next.WTR.Common</Name>
+      <Name>Demo.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Next.WTR.Types\Next.WTR.Types.csproj">
+    <ProjectReference Include="..\Next.WTR.Types\Demo.Types.csproj">
       <Project>{9033BA8A-C531-4DCD-A342-A4B57DDD11D9}</Project>
-      <Name>Next.WTR.Types</Name>
+      <Name>Demo.Types</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Next.WTR.Web.Dtos\Next.WTR.Web.Dtos.csproj">
+    <ProjectReference Include="..\Next.WTR.Web.Dtos\Demo.Web.Dtos.csproj">
       <Project>{D383FC01-3AB8-4106-98EA-543607ACE0E9}</Project>
-      <Name>Next.WTR.Web.Dtos</Name>
+      <Name>Demo.Web.Dtos</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

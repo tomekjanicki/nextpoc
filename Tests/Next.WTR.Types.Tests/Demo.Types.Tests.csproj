@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F34C0E7A-3420-47F1-9F92-A24EA76E5E5A}</ProjectGuid>
+    <ProjectGuid>{CC8DD834-7317-4928-ABCE-ED4A0A99D8D2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Next.WTR.Common.Web.Tests</RootNamespace>
-    <AssemblyName>Next.WTR.Common.Web.Tests</AssemblyName>
+    <RootNamespace>Next.WTR.Types.Tests</RootNamespace>
+    <AssemblyName>Next.WTR.Types.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -33,14 +32,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <CodeAnalysisRuleSet>..\..\Next.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="NSubstitute, Version=2.0.3.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
       <HintPath>..\..\packages\NSubstitute.2.0.3\lib\net45\NSubstitute.dll</HintPath>
     </Reference>
@@ -56,14 +51,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Core" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,29 +62,34 @@
     <Compile Include="..\..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Infrastructure\WebApiControllerHelperTests.cs" />
+    <Compile Include="FunctionalExtensions\MaybeTests.cs" />
+    <Compile Include="FunctionalExtensions\ExtensionsTests.cs" />
+    <Compile Include="FunctionalExtensions\ResultTests.cs" />
+    <Compile Include="FunctionalExtensions\SimpleClassValueObjectTests.cs" />
+    <Compile Include="FunctionalExtensions\SimpleStructValueObject.cs" />
+    <Compile Include="NonEmptyLowerCaseStringTests.cs" />
+    <Compile Include="NonEmptyStringTests.cs" />
+    <Compile Include="NonNegativeDecimalTests.cs" />
+    <Compile Include="NonNegativeIntTests.cs" />
+    <Compile Include="PositiveDecimalTests.cs" />
+    <Compile Include="PositiveIntTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringExtensionsTests.cs" />
+    <Compile Include="TypeExtensionsTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Projects\Next.WTR.Common.Test\Next.WTR.Common.Test.csproj">
-      <Project>{61886c59-7ee1-432f-8c04-5b6b97c45032}</Project>
-      <Name>Next.WTR.Common.Test</Name>
+    <ProjectReference Include="..\..\Projects\Next.WTR.Common.Test\Demo.Common.Test.csproj">
+      <Project>{61886C59-7EE1-432F-8C04-5B6B97C45032}</Project>
+      <Name>Demo.Common.Test</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Projects\Next.WTR.Common.Web\Next.WTR.Common.Web.csproj">
-      <Project>{800fd538-82d0-43df-8d2c-618c2327b15e}</Project>
-      <Name>Next.WTR.Common.Web</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Projects\Next.WTR.Common\Next.WTR.Common.csproj">
-      <Project>{b97efb86-fb8b-43b7-9892-d4e2af7257b6}</Project>
-      <Name>Next.WTR.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Projects\Next.WTR.Types\Next.WTR.Types.csproj">
-      <Project>{9033BA8A-C531-4DCD-A342-A4B57DDD11D9}</Project>
-      <Name>Next.WTR.Types</Name>
+    <ProjectReference Include="..\..\Projects\Next.WTR.Types\Demo.Types.csproj">
+      <Project>{9033ba8a-c531-4dcd-a342-a4b57ddd11d9}</Project>
+      <Name>Demo.Types</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
