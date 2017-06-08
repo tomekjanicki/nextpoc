@@ -20,9 +20,9 @@
             _mapper = mapper;
         }
 
-        public IResult<Paged<ResponseProduct>, Error> FilterPaged(int skip, int top, string filter, string orderBy)
+        public IResult<Paged<ResponseProduct>, Error> FilterPaged(int skip, int top, string orderBy)
         {
-            var queryResult = Query.TryCreate(orderBy, skip, top, filter);
+            var queryResult = Query.TryCreate(orderBy, skip, top);
 
             return Helper.GetItems<Paged<ResponseProduct>, Query, Common.ValueObjects.Paged<Product>>(_mediator, _mapper, queryResult);
         }

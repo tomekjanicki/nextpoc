@@ -24,9 +24,9 @@
         }
 
         [HttpGet]
-        public IHttpActionResult FilterPaged(int skip, int top, string filter = null, string orderBy = null)
+        public IHttpActionResult FilterPaged(int skip, int top, string orderBy = null)
         {
-            var result = _productsFilterPagedFacade.FilterPaged(skip, top, filter.IfNullReplaceWithEmptyString(), orderBy.IfNullReplaceWithEmptyString());
+            var result = _productsFilterPagedFacade.FilterPaged(skip, top, orderBy.IfNullReplaceWithEmptyString());
 
             return GetHttpActionResult(result);
         }

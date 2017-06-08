@@ -25,14 +25,13 @@
 
         public string Code { get; }
 
-        public static IResult<Query, NonEmptyString> TryCreate(string orderBy, int skip, int top, string filter)
+        public static IResult<Query, NonEmptyString> TryCreate(string orderBy, int skip, int top)
         {
-            return TryCreate(orderBy, skip, top, filter, Guid.NewGuid());
+            return TryCreate(orderBy, skip, top, Guid.NewGuid());
         }
 
-        public static IResult<Query, NonEmptyString> TryCreate(string orderBy, int skip, int top, string filter, Guid id)
+        public static IResult<Query, NonEmptyString> TryCreate(string orderBy, int skip, int top, Guid id)
         {
-            // todo filter parser
             var orderByParseResult = OrderByParser.TryParse(orderBy, Columns.GetAllowedColumns());
 
             return orderByParseResult.
