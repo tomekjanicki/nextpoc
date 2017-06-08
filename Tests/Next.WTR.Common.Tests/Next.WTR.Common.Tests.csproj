@@ -86,7 +86,6 @@
     <Compile Include="Shared\TemplateMethods\Commands\DeleteCommandHandlerTemplateTests.cs" />
     <Compile Include="Shared\TemplateMethods\Commands\UpdateCommandHandlerTemplateTests.cs" />
     <Compile Include="Shared\TemplateMethods\Queries\GetCommandHandlerTemplateTests.cs" />
-    <Compile Include="ValueObjects\DateTimePeriodTests.cs" />
     <Compile Include="ValueObjects\IdVersionTests.cs" />
     <Compile Include="ValueObjects\NonEmptyOrderByCollectionTests.cs" />
     <Compile Include="ValueObjects\OrderByCollectionTests.cs" />

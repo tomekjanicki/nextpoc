@@ -183,7 +183,6 @@
     <Compile Include="Tools\AssemblyVersionProvider.cs" />
     <Compile Include="Tools\Interfaces\IAssemblyVersionProvider.cs" />
     <Compile Include="Tools\Interfaces\IEntryAssemblyProvider.cs" />
-    <Compile Include="ValueObjects\DateTimePeriod.cs" />
     <Compile Include="ValueObjects\IdVersion.cs" />
     <Compile Include="ValueObjects\NonEmptyOrderByCollection.cs" />
     <Compile Include="ValueObjects\OrderBy.cs" />
