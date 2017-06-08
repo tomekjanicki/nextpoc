@@ -244,9 +244,3 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 /Projects/Next.WTR.Web/Logs
-/Projects/Next.WTR.Web/*.config
-!/Projects/Next.WTR.Web/*.octopus.config
-!/Projects/Next.WTR.Web/packages.config
-!/Projects/Next.WTR.Web/log4net.config
-!/Projects/Next.WTR.Web/web.config
-!/Projects/Next.WTR.Web/web.Release.config

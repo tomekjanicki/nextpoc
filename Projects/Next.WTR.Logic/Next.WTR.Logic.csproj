@@ -61,10 +61,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="Thinktecture.IdentityModel.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Thinktecture.IdentityModel.Core.1.4.0\lib\net45\Thinktecture.IdentityModel.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\CommonAssemblyInfo.cs">
@@ -80,12 +76,6 @@
     <Compile Include="CQ\User\GetData\AttributesDto.cs" />
     <Compile Include="CQ\User\GetData\Interfaces\IRepository.cs" />
     <Compile Include="CQ\User\GetData\Repository.cs" />
-    <Compile Include="Facades\Apis\AccountLoginFacade.cs" />
-    <Compile Include="Facades\Apis\AccountLogoutFacade.cs" />
-    <Compile Include="Helpers\QueryCommandFactories\Interfaces\IUserCreateSessionCommandFactory.cs" />
-    <Compile Include="Helpers\QueryCommandFactories\Interfaces\IUserDeleteSessionCommandFactory.cs" />
-    <Compile Include="Helpers\QueryCommandFactories\UserDeleteSessionCommandFactory.cs" />
-    <Compile Include="Helpers\QueryCommandFactories\UserCreateSessionCommandFactory.cs" />
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="CQ\Product\FilterPaged\Columns.cs" />
@@ -111,9 +101,6 @@
     <Compile Include="Facades\Apis\ProductsDeleteFacade.cs" />
     <Compile Include="Facades\Apis\ProductsInsertFacade.cs" />
     <Compile Include="Facades\Apis\ProductsUpdateFacade.cs" />
-    <Compile Include="Facades\Shared\GetClaimsPrincipalBySessionIdFacade.cs" />
-    <Compile Include="Helpers\QueryCommandFactories\UserGetDataQueryIdQueryFactory.cs" />
-    <Compile Include="Helpers\QueryCommandFactories\Interfaces\IUserGetDataQueryFactory.cs" />
     <Compile Include="Facades\Apis\ProductsFilterPagedFacade.cs" />
     <Compile Include="Facades\Apis\ProductsGetFacade.cs" />
     <Compile Include="Facades\Apis\VersionGetFacade.cs" />
@@ -159,6 +146,9 @@
   <ItemGroup>
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\packages\Fody.2.1.0\build\netstandard1.0\Fody.targets" Condition="Exists('..\..\packages\Fody.2.1.0\build\netstandard1.0\Fody.targets')" />

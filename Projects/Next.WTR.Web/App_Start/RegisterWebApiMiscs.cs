@@ -6,7 +6,6 @@
     using System.Web.Http.ExceptionHandling;
     using Newtonsoft.Json.Converters;
     using Newtonsoft.Json.Serialization;
-    using Next.WTR.Common.Web.Infrastructure.Security;
     using Next.WTR.Web.Infrastructure;
 
     public static class RegisterWebApiMiscs
@@ -16,7 +15,6 @@
             configuration.Formatters.Clear();
             configuration.Formatters.Add(GetConfiguredJsonMediaTypeFormatter());
             configuration.Services.Add(typeof(IExceptionLogger), new GlobalWebApiExceptionLogger());
-            configuration.Filters.Add(new WebApiResourceActionAuthorizeAttribute());
         }
 
         private static JsonMediaTypeFormatter GetConfiguredJsonMediaTypeFormatter()

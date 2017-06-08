@@ -11,23 +11,16 @@
     using Next.WTR.Common.Handlers.Interfaces;
     using Next.WTR.Common.IoC;
     using Next.WTR.Common.Mappings;
-    using Next.WTR.Common.Security.Interfaces;
     using Next.WTR.Common.Shared.TemplateMethods.Commands.Interfaces;
     using Next.WTR.Common.Shared.TemplateMethods.Queries.Interfaces;
     using Next.WTR.Common.Tools;
     using Next.WTR.Common.Tools.Interfaces;
-    using Next.WTR.Common.Web.Infrastructure.Security;
-    using Next.WTR.Common.Web.Infrastructure.Security.Interface;
     using Next.WTR.Logic.CQ.Product;
     using Next.WTR.Logic.Database;
     using Next.WTR.Logic.Database.Interfaces;
     using Next.WTR.Logic.Facades.Apis;
-    using Next.WTR.Logic.Facades.Shared;
-    using Next.WTR.Logic.Helpers.QueryCommandFactories;
-    using Next.WTR.Logic.Helpers.QueryCommandFactories.Interfaces;
     using Next.WTR.Logic.Mappings;
     using Next.WTR.Web.Infrastructure;
-    using Next.WTR.Web.Infrastructure.Security;
     using SimpleInjector;
     using SimpleInjector.Integration.WebApi;
     using SimpleInjector.Lifestyles;
@@ -58,17 +51,10 @@
             container.RegisterSingleton<IAssemblyVersionProvider, AssemblyVersionProvider>();
             container.RegisterSingleton<IDbConnectionProvider, DbConnectionProvider>();
             container.RegisterSingleton<IEntryAssemblyProvider, EntryAssemblyProvider>();
-            container.RegisterSingleton<IAuthenticationService, AuthenticationService>();
             container.RegisterSingleton<ICacheProvider, CacheProvider>();
-            container.RegisterSingleton<IUserGetDataQueryFactory, UserGetDataQueryIdQueryFactory>();
-            container.RegisterSingleton<IUserCreateSessionCommandFactory, UserCreateSessionCommandFactory>();
-            container.RegisterSingleton<IUserDeleteSessionCommandFactory, UserDeleteSessionCommandFactory>();
-            container.RegisterSingleton<IAccessConfigurationMapProvider, AccessConfigurationMapProvider>();
-            container.RegisterSingleton<IAccessResolver, AccessResolver>();
             container.RegisterSingleton(() => Helper.GetMapper(AutoMapperConfiguration.Configure));
 
             // todo consider go back to scoped lifestyle
-            container.RegisterSingleton<IClaimsPrincipalProvider, ClaimsPrincipalProvider>();
             container.RegisterSingleton<Logic.CQ.Product.Delete.Interfaces.IRepository, Logic.CQ.Product.Delete.Repository>();
             container.RegisterSingleton<IUpdateRepository<Logic.CQ.Product.Update.Command>, Logic.CQ.Product.Update.Repository>();
             container.RegisterSingleton<Logic.CQ.Product.Insert.Interfaces.IRepository, Logic.CQ.Product.Insert.Repository>();
@@ -87,15 +73,12 @@
         {
             return new List<Type>
             {
-                typeof(GetClaimsPrincipalBySessionIdFacade),
                 typeof(ProductsFilterPagedFacade),
                 typeof(ProductsGetFacade),
                 typeof(VersionGetFacade),
                 typeof(ProductsDeleteFacade),
                 typeof(ProductsUpdateFacade),
                 typeof(ProductsInsertFacade),
-                typeof(AccountLoginFacade),
-                typeof(AccountLogoutFacade),
                 typeof(SharedQueries)
             }.ToImmutableList();
         }

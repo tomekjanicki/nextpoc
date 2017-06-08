@@ -75,7 +75,6 @@
     <Compile Include="..\..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Infrastructure\Security\AccessResolverTests.cs" />
     <Compile Include="Infrastructure\WebApiControllerHelperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

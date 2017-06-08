@@ -147,14 +147,6 @@
       <HintPath>..\..\packages\System.Xml.XmlDocument.4.3.0\lib\net46\System.Xml.XmlDocument.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Thinktecture.IdentityModel.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Thinktecture.IdentityModel.Core.1.4.0\lib\net45\Thinktecture.IdentityModel.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Thinktecture.IdentityModel.WebApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Thinktecture.IdentityModel.WebApi.2.0.1\lib\net45\Thinktecture.IdentityModel.WebApi.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\CommonAssemblyInfo.cs">
@@ -162,16 +154,9 @@
     </Compile>
     <Compile Include="Infrastructure\ApiControllerExtensions.cs" />
     <Compile Include="Infrastructure\BaseWebApiController.cs" />
-    <Compile Include="Infrastructure\Security\ClaimsTransformer.cs" />
-    <Compile Include="Infrastructure\Security\Interface\IClaimsPrincipalProvider.cs" />
     <Compile Include="Infrastructure\StatusCodeTextPlainActionResult.cs" />
     <Compile Include="Infrastructure\WebApiControllerHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Infrastructure\Security\AccessResolver.cs" />
-    <Compile Include="Infrastructure\Security\AuthorizationManager.cs" />
-    <Compile Include="Infrastructure\Security\Interface\IAccessConfigurationMapProvider.cs" />
-    <Compile Include="Infrastructure\Security\Interface\IAccessResolver.cs" />
-    <Compile Include="Infrastructure\Security\WebApiResourceActionAuthorizeAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
