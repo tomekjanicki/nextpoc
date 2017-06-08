@@ -5,7 +5,30 @@
     <title>Customers</title>
 </head>
 <body>
-    <input type="button" value="click" data-bind="click: testClick"/>
+    <div data-bind="visible: listVisible">
+        <input type="button" data-bind="click: testClick" />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: customers">
+                <tr>
+                    <td data-bind="text: name"></td>
+                    <td data-bind="text: surname"></td>
+                    <td data-bind="text: phoneNumber"></td>
+                    <td data-bind="text: address"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div data-bind="visible: insertOrUpdateVisible" style="display: none">
+
+    </div>
     <script src="Scripts/jquery-3.1.1.js"></script>
     <script src="Scripts/knockout-3.4.2.debug.js"></script>
     <script src="Scripts/App/CustomerViewModel.js"></script>
