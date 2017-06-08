@@ -37,7 +37,7 @@
 
         private static NonEmptyString GetSortColumns(OrderByCollection modelOrderByCollection)
         {
-            var defaultDatabaseOrderByCollection = Extensions.GetValue(() => NonEmptyOrderByCollection.TryCreate(new List<OrderBy> { OrderBy.Create((NonEmptyString)"CODE", true) }.ToImmutableList()));
+            var defaultDatabaseOrderByCollection = Extensions.GetValue(() => NonEmptyOrderByCollection.TryCreate(new List<OrderBy> { OrderBy.Create((NonEmptyString)"NAME", true), OrderBy.Create((NonEmptyString)"SURNAME", true) }.ToImmutableList()));
             return CommandHelper.GetTranslatedSort(modelOrderByCollection, defaultDatabaseOrderByCollection, Columns.GetMappings());
         }
     }
