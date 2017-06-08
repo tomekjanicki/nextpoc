@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{92
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8A636113-5D27-43DF-A291-5B66EB1DA71F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.WebApi", "Projects\Demo.Web\Demo.WebApi.csproj", "{CFD858E7-4A1B-423B-8DFA-E68D0CD4E6EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.WebApi", "Projects\Demo.WebApi\Demo.WebApi.csproj", "{CFD858E7-4A1B-423B-8DFA-E68D0CD4E6EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.WebApi.Dtos", "Projects\Demo.Web.Dtos\Demo.WebApi.Dtos.csproj", "{D383FC01-3AB8-4106-98EA-543607ACE0E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.WebApi.Dtos", "Projects\Demo.WebApi.Dtos\Demo.WebApi.Dtos.csproj", "{D383FC01-3AB8-4106-98EA-543607ACE0E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Common", "Projects\Demo.Common\Demo.Common.csproj", "{B97EFB86-FB8B-43B7-9892-D4E2AF7257B6}"
 EndProject

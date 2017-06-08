@@ -243,4 +243,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
-/Projects/Demo.Web/Logs
+/Projects/Demo.WebApi/Logs

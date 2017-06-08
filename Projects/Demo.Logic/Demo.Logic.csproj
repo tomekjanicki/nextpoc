@@ -126,7 +126,7 @@
       <Project>{9033BA8A-C531-4DCD-A342-A4B57DDD11D9}</Project>
       <Name>Demo.Types</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Demo.Web.Dtos\Demo.WebApi.Dtos.csproj">
+    <ProjectReference Include="..\Demo.WebApi.Dtos\Demo.WebApi.Dtos.csproj">
       <Project>{D383FC01-3AB8-4106-98EA-543607ACE0E9}</Project>
       <Name>Demo.WebApi.Dtos</Name>
     </ProjectReference>
