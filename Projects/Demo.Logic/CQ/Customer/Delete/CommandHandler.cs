@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.CQ.Customer.Delete
+﻿namespace Demo.Logic.CQ.Customer.Delete
 {
     using Common.Shared.TemplateMethods.Commands;
     using Interfaces;

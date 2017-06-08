@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Shared.TemplateMethods.Commands
+﻿namespace Demo.Common.Shared.TemplateMethods.Commands
 {
     using Handlers.Interfaces;
     using Interfaces;

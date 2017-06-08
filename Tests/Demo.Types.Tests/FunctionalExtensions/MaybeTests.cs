@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Types.Tests.FunctionalExtensions
+﻿namespace Demo.Types.Tests.FunctionalExtensions
 {
     using System;
     using NUnit.Framework;

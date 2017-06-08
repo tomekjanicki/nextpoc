@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Web.Dtos.Apis.Customer.FilterPaged
+﻿namespace Demo.Web.Dtos.Apis.Customer.FilterPaged
 {
     public sealed class ResponseCustomer
     {

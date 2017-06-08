@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Tests.Mappings.TypeConverters
+﻿namespace Demo.Common.Tests.Mappings.TypeConverters
 {
     using System.Collections.Generic;
     using System.Collections.Immutable;

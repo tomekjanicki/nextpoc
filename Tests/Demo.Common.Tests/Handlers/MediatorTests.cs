@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Tests.Handlers
+﻿namespace Demo.Common.Tests.Handlers
 {
     using System;
     using Common.Handlers;

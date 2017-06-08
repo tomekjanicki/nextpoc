@@ -1,4 +1,4 @@
-namespace Next.WTR.Types.Tests
+namespace Demo.Types.Tests
 {
     using NUnit.Framework;
     using Shouldly;

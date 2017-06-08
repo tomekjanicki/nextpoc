@@ -1,4 +1,4 @@
-namespace Next.WTR.Logic.Database
+namespace Demo.Logic.Database
 {
     using System.Data;
     using Common.Database;

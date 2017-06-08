@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Mappings.TypeConverters
+﻿namespace Demo.Common.Mappings.TypeConverters
 {
     using AutoMapper;
     using Types.FunctionalExtensions;

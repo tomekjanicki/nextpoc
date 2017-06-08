@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Web.Dtos.Apis.Customer.Get
+﻿namespace Demo.Web.Dtos.Apis.Customer.Get
 {
     public sealed class ResponseCustomer
     {

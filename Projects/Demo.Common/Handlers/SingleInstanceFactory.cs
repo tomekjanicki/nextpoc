@@ -1,4 +1,4 @@
-namespace Next.WTR.Common.Handlers
+namespace Demo.Common.Handlers
 {
     using System;
 

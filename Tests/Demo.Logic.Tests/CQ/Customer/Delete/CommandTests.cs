@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.Tests.CQ.Customer.Delete
+﻿namespace Demo.Logic.Tests.CQ.Customer.Delete
 {
     using System;
     using Common.Test;

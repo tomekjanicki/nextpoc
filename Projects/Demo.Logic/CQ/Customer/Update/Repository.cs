@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.CQ.Customer.Update
+﻿namespace Demo.Logic.CQ.Customer.Update
 {
     using Common.Shared.TemplateMethods.Commands.Interfaces;
     using Dapper;

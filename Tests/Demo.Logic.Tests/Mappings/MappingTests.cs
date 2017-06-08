@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.Tests.Mappings
+﻿namespace Demo.Logic.Tests.Mappings
 {
     using AutoMapper;
     using Common.Mappings;

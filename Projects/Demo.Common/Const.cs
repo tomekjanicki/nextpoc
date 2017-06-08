@@ -1,4 +1,4 @@
-namespace Next.WTR.Common
+namespace Demo.Common
 {
     public class Const
     {

@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.CQ.Customer.Delete
+﻿namespace Demo.Logic.CQ.Customer.Delete
 {
     using Dapper;
     using Database.Interfaces;

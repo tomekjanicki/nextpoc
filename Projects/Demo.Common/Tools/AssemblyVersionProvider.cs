@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Tools
+﻿namespace Demo.Common.Tools
 {
     using System;
     using System.Reflection;

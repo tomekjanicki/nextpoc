@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Tests.ValueObjects
+﻿namespace Demo.Common.Tests.ValueObjects
 {
     using System.Collections;
     using Common.ValueObjects;

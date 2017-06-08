@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.Database.Interfaces
+﻿namespace Demo.Logic.Database.Interfaces
 {
     using System.Data;
 

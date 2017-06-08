@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Log4Net
+﻿namespace Demo.Common.Log4Net
 {
     using System;
     using log4net;

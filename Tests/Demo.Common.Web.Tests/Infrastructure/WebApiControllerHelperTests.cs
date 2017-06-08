@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Web.Tests.Infrastructure
+﻿namespace Demo.Common.Web.Tests.Infrastructure
 {
     using System.Net;
     using System.Net.Http;

@@ -1,4 +1,4 @@
-namespace Next.WTR.Common.Dtos
+namespace Demo.Common.Dtos
 {
     using System.Collections.Immutable;
 

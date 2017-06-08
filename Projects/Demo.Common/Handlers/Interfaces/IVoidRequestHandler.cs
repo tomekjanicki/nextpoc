@@ -1,4 +1,4 @@
-namespace Next.WTR.Common.Handlers.Interfaces
+namespace Demo.Common.Handlers.Interfaces
 {
     public interface IVoidRequestHandler<in TRequest>
         where TRequest : IRequest

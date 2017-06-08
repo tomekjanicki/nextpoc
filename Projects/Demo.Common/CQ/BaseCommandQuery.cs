@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.CQ
+﻿namespace Demo.Common.CQ
 {
     using System;
     using Types.FunctionalExtensions;

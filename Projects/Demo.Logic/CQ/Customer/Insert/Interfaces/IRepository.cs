@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.CQ.Customer.Insert.Interfaces
+﻿namespace Demo.Logic.CQ.Customer.Insert.Interfaces
 {
     using Types;
 

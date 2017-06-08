@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Types
+﻿namespace Demo.Types
 {
     using FunctionalExtensions;
 

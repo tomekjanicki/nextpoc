@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common
+﻿namespace Demo.Common
 {
     using System;
     using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Tests.Shared
+﻿namespace Demo.Common.Tests.Shared
 {
     using System.Collections;
     using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.CQ.Customer.Delete.Interfaces
+﻿namespace Demo.Logic.CQ.Customer.Delete.Interfaces
 {
     using Common.Shared.TemplateMethods.Commands.Interfaces;
 

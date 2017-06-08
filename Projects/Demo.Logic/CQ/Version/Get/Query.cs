@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.CQ.Version.Get
+﻿namespace Demo.Logic.CQ.Version.Get
 {
     using System;
     using System.Collections.Generic;

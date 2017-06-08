@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Tests.Facades
+﻿namespace Demo.Common.Tests.Facades
 {
     using AutoMapper;
     using Common.Facades;

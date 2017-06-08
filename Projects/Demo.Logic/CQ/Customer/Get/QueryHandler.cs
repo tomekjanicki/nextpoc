@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.CQ.Customer.Get
+﻿namespace Demo.Logic.CQ.Customer.Get
 {
     using Common.Shared.TemplateMethods.Queries;
     using Common.Shared.TemplateMethods.Queries.Interfaces;

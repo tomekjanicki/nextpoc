@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Types.FunctionalExtensions
+﻿namespace Demo.Types.FunctionalExtensions
 {
     public interface IResult<out TResult, out TError> : IResult<TError>
         where TError : class

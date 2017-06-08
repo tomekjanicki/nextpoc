@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Mappings
+﻿namespace Demo.Common.Mappings
 {
     using System;
     using AutoMapper;

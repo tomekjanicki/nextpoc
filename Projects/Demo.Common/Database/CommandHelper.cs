@@ -1,4 +1,4 @@
-namespace Next.WTR.Common.Database
+namespace Demo.Common.Database
 {
     using System;
     using System.Collections.Generic;

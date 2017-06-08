@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Shared
+﻿namespace Demo.Common.Shared
 {
     using System;
     using Types;

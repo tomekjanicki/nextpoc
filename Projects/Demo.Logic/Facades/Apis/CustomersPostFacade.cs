@@ -1,4 +1,4 @@
-namespace Next.WTR.Logic.Facades.Apis
+namespace Demo.Logic.Facades.Apis
 {
     using AutoMapper;
     using Common.Facades;

@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Web.Dtos.Apis.Customer.Post
+﻿namespace Demo.Web.Dtos.Apis.Customer.Post
 {
     using Common.Dtos;
 

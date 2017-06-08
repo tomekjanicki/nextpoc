@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Test
+﻿namespace Demo.Common.Test
 {
     using Shouldly;
     using Types;

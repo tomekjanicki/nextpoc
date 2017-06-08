@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Tests
+﻿namespace Demo.Common.Tests
 {
     using System.Collections.Immutable;
     using System.Linq;

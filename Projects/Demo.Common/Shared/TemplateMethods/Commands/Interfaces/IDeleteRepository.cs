@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Shared.TemplateMethods.Commands.Interfaces
+﻿namespace Demo.Common.Shared.TemplateMethods.Commands.Interfaces
 {
     using Types;
     using Types.FunctionalExtensions;

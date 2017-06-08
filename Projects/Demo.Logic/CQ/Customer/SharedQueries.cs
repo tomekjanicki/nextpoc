@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.CQ.Customer
+﻿namespace Demo.Logic.CQ.Customer
 {
     using System;
     using Dapper;

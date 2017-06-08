@@ -1,4 +1,4 @@
-namespace Next.WTR.Types.FunctionalExtensions
+namespace Demo.Types.FunctionalExtensions
 {
     using System;
 

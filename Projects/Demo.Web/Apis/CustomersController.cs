@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Web.Apis
+﻿namespace Demo.Web.Apis
 {
     using System.Web.Http;
     using Common.Web.Infrastructure;

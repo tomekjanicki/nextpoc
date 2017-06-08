@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Tests.Database
+﻿namespace Demo.Common.Tests.Database
 {
     using System.Collections.Generic;
     using System.Collections.Immutable;

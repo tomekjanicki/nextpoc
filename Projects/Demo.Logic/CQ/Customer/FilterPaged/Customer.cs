@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.CQ.Customer.FilterPaged
+﻿namespace Demo.Logic.CQ.Customer.FilterPaged
 {
     using System;
     using Types;

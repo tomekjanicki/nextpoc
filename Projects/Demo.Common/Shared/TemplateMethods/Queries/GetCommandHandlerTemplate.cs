@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Shared.TemplateMethods.Queries
+﻿namespace Demo.Common.Shared.TemplateMethods.Queries
 {
     using Handlers.Interfaces;
     using Interfaces;

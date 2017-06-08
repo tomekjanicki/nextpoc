@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Web.Infrastructure
+﻿namespace Demo.Common.Web.Infrastructure
 {
     using System.Net;
     using System.Net.Http;

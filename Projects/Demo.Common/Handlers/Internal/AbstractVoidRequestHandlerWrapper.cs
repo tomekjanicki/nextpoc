@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.Handlers.Internal
+﻿namespace Demo.Common.Handlers.Internal
 {
     using Interfaces;
 

@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.CQ.Customer.Insert
+﻿namespace Demo.Logic.CQ.Customer.Insert
 {
     using System;
     using System.Collections.Immutable;

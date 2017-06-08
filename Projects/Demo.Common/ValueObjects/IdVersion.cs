@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Common.ValueObjects
+﻿namespace Demo.Common.ValueObjects
 {
     using System.Collections.Immutable;
     using Types;

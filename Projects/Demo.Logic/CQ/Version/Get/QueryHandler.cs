@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.CQ.Version.Get
+﻿namespace Demo.Logic.CQ.Version.Get
 {
     using Common.Handlers.Interfaces;
     using Common.Tools.Interfaces;

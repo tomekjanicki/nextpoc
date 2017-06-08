@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.Mappings
+﻿namespace Demo.Logic.Mappings
 {
     using System.Collections.Generic;
     using System.Collections.Immutable;

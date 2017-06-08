@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Logic.CQ.Customer.ValueObjects
+﻿namespace Demo.Logic.CQ.Customer.ValueObjects
 {
     using Types;
     using Types.FunctionalExtensions;

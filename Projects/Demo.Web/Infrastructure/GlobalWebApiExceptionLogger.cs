@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Web.Infrastructure
+﻿namespace Demo.Web.Infrastructure
 {
     using System.Web.Http.ExceptionHandling;
     using Common.Log4Net;
