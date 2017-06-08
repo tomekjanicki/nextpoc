@@ -20,8 +20,8 @@
         {
             var httpConfiguration = new HttpConfiguration();
             RegisterContainer.Execute(httpConfiguration);
-            RegisterWebApiRoutes.Execute(httpConfiguration);
             RegisterWebApiMiscs.Execute(httpConfiguration);
+            RegisterWebApiRoutes.Execute(httpConfiguration);
             appBuilder.UseWebApi(httpConfiguration);
             Logger.Info(() => "Application started");
         }
