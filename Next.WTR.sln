@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{9252B1AE-31A9-47A2-A8F5-82489A74EAA8}"
 EndProject
@@ -38,10 +38,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next.WTR.Common.Test", "Projects\Next.WTR.Common.Test\Next.WTR.Common.Test.csproj", "{61886C59-7EE1-432F-8C04-5B6B97C45032}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next.WTR.Common.Dtos", "Projects\Next.WTR.Common.Dtos\Next.WTR.Common.Dtos.csproj", "{01E0946A-2E00-431F-903A-B0F101422227}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next.WTR.Web.Client", "Projects\Next.WTR.Web.Client\Next.WTR.Web.Client.csproj", "{56CF86DF-6B98-46B1-9DAE-951096B58D04}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next.WTR.Web.Client.TestApp", "Projects\Next.WTR.Web.Client.TestApp\Next.WTR.Web.Client.TestApp.csproj", "{4E358FE1-FCA1-4847-A36F-B9728B3B3A08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,14 +97,6 @@ Global
 		{01E0946A-2E00-431F-903A-B0F101422227}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01E0946A-2E00-431F-903A-B0F101422227}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01E0946A-2E00-431F-903A-B0F101422227}.Release|Any CPU.Build.0 = Release|Any CPU
-		{56CF86DF-6B98-46B1-9DAE-951096B58D04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{56CF86DF-6B98-46B1-9DAE-951096B58D04}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{56CF86DF-6B98-46B1-9DAE-951096B58D04}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{56CF86DF-6B98-46B1-9DAE-951096B58D04}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4E358FE1-FCA1-4847-A36F-B9728B3B3A08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E358FE1-FCA1-4847-A36F-B9728B3B3A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E358FE1-FCA1-4847-A36F-B9728B3B3A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E358FE1-FCA1-4847-A36F-B9728B3B3A08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,7 +115,5 @@ Global
 		{1E1063E7-0934-4C11-AFDB-99DF50DC1FA3} = {8A636113-5D27-43DF-A291-5B66EB1DA71F}
 		{61886C59-7EE1-432F-8C04-5B6B97C45032} = {9252B1AE-31A9-47A2-A8F5-82489A74EAA8}
 		{01E0946A-2E00-431F-903A-B0F101422227} = {9252B1AE-31A9-47A2-A8F5-82489A74EAA8}
-		{56CF86DF-6B98-46B1-9DAE-951096B58D04} = {9252B1AE-31A9-47A2-A8F5-82489A74EAA8}
-		{4E358FE1-FCA1-4847-A36F-B9728B3B3A08} = {9252B1AE-31A9-47A2-A8F5-82489A74EAA8}
 	EndGlobalSection
 EndGlobal
