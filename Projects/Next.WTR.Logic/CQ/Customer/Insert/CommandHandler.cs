@@ -17,13 +17,6 @@
 
         public IResult<PositiveInt, Error> Handle(Command message)
         {
-            var codeExists = _repository.CodeExists(message.Code);
-
-            if (codeExists)
-            {
-                return ((NonEmptyString)"Code already defined").ToGeneric<PositiveInt>();
-            }
-
             var id = _repository.Insert(message);
 
             return Result<PositiveInt, Error>.Ok(id);

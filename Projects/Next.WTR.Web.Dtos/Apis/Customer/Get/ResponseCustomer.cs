@@ -1,31 +1,26 @@
 ﻿namespace Next.WTR.Web.Dtos.Apis.Customer.Get
 {
-    using System;
-
     public sealed class ResponseCustomer
     {
-        public ResponseCustomer(int id, string code, string name, decimal price, DateTime? date, bool canDelete, string version)
+        public ResponseCustomer(int id, string surname, string name, string phoneNumber, string address, string version)
         {
             Id = id;
-            Code = code;
+            Surname = surname;
             Name = name;
-            Price = price;
-            Date = date;
-            CanDelete = canDelete;
+            Address = address;
+            PhoneNumber = phoneNumber;
             Version = version;
         }
 
         public int Id { get; }
 
-        public string Code { get; }
+        public string Surname { get; }
 
         public string Name { get; }
 
-        public decimal Price { get; }
+        public string PhoneNumber { get; }
 
-        public DateTime? Date { get; }
-
-        public bool CanDelete { get; }
+        public string Address { get; }
 
         public string Version { get; }
     }

@@ -66,6 +66,8 @@
     <Compile Include="..\..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="CQ\Customer\ValueObjects\Address.cs" />
+    <Compile Include="CQ\Customer\ValueObjects\PhoneNumber.cs" />
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
     <Compile Include="CQ\Customer\FilterPaged\Columns.cs" />
     <Compile Include="CQ\Customer\Delete\Command.cs" />
@@ -81,7 +83,7 @@
     <Compile Include="CQ\Customer\Update\CommandHandler.cs" />
     <Compile Include="CQ\Customer\Update\Repository.cs" />
     <Compile Include="CQ\Customer\SharedQueries.cs" />
-    <Compile Include="CQ\Customer\ValueObjects\Code.cs" />
+    <Compile Include="CQ\Customer\ValueObjects\Surname.cs" />
     <Compile Include="CQ\Customer\ValueObjects\Name.cs" />
     <Compile Include="Database\DbConnectionProvider.cs" />
     <Compile Include="Facades\Apis\CustomersDeleteFacade.cs" />

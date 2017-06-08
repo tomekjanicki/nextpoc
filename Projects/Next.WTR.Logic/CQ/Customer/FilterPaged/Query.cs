@@ -11,19 +11,13 @@
 
     public sealed class Query : BaseCommandQuery<Query>, IRequest<Paged<Customer>>
     {
-        private Query(string name, string code, OrderByTopSkip orderByTopSkip, Guid commandId)
+        private Query(OrderByTopSkip orderByTopSkip, Guid commandId)
             : base(commandId)
         {
-            Name = name;
-            Code = code;
             OrderByTopSkip = orderByTopSkip;
         }
 
         public OrderByTopSkip OrderByTopSkip { get; }
-
-        public string Name { get; }
-
-        public string Code { get; }
 
         public static IResult<Query, NonEmptyString> TryCreate(string orderBy, int skip, int top)
         {
@@ -36,17 +30,17 @@
 
             return orderByParseResult.
                 OnSuccess(orderBys => OrderByTopSkip.TryCreate(orderBys, skip, top, (NonEmptyString)nameof(TopSkip.Top), (NonEmptyString)nameof(TopSkip.Skip))).
-                OnSuccess(orderByTopSkip => GetOkResult(new Query(string.Empty, string.Empty, orderByTopSkip, id)));
+                OnSuccess(orderByTopSkip => GetOkResult(new Query(orderByTopSkip, id)));
         }
 
         protected override bool EqualsCore(Query other)
         {
-            return base.EqualsCore(other) && OrderByTopSkip == other.OrderByTopSkip && Name == other.Name && Code == other.Code;
+            return base.EqualsCore(other) && OrderByTopSkip == other.OrderByTopSkip;
         }
 
         protected override int GetHashCodeCore()
         {
-            return GetCalculatedHashCode(new object[] { OrderByTopSkip, Name, Code, CommandId }.ToImmutableList());
+            return GetCalculatedHashCode(new object[] { OrderByTopSkip, CommandId }.ToImmutableList());
         }
     }
 }

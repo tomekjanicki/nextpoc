@@ -19,7 +19,7 @@
         {
             using (var connection = _dbConnectionProvider.GetOpenDbConnection())
             {
-                return connection.QuerySingle<bool>("x", new { id.Value });
+                return connection.QuerySingle<bool>("SELECT CAST(CASE WHEN COUNT(*) > 0 THEN 1 ELSE 0 END AS BIT) FROM DBO.CUSTOMERS WHERE ID = @ID", new { id = id.Value });
             }
         }
 
@@ -27,7 +27,7 @@
         {
             using (var connection = _dbConnectionProvider.GetOpenDbConnection())
             {
-                var result = connection.QuerySingleOrDefault<byte[]>("SELECT VERSION FROM DBO.PRODUCTS WHERE ID = @ID", new { id = id.Value });
+                var result = connection.QuerySingleOrDefault<byte[]>("SELECT VERSION FROM DBO.CUSTOMERS WHERE ID = @ID", new { id = id.Value });
                 return result != null ? (NonEmptyString)Convert.ToBase64String(result) : null;
             }
         }

@@ -22,7 +22,7 @@ namespace Next.WTR.Logic.Facades.Apis
 
         public IResult<int, Error> Post(RequestCustomer requestCustomer)
         {
-            var commandResult = Command.TryCreate(requestCustomer.Name, requestCustomer.Code, requestCustomer.Price);
+            var commandResult = Command.TryCreate(requestCustomer.Name, requestCustomer.Surname, requestCustomer.PhoneNumber, requestCustomer.Address);
 
             return Helper.Insert<int, Command, PositiveInt>(_mediator, _mapper, commandResult);
         }

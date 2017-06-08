@@ -27,19 +27,11 @@
             return _sharedQueries.GetRowVersionById(id);
         }
 
-        public bool CanBeDeleted(PositiveInt id)
-        {
-            using (var connection = _dbConnectionProvider.GetOpenDbConnection())
-            {
-                return connection.QuerySingle<bool>("x", new { id = id.Value });
-            }
-        }
-
         public void Delete(PositiveInt id)
         {
             using (var connection = _dbConnectionProvider.GetOpenDbConnection())
             {
-                connection.Execute("DELETE FROM DBO.PRODUCTS WHERE ID = @ID", new { id = id.Value });
+                connection.Execute("DELETE FROM DBO.CUSTOMERS WHERE ID = @ID", new { id = id.Value });
             }
         }
     }

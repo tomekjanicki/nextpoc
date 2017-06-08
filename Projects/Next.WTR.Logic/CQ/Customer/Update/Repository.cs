@@ -31,7 +31,7 @@
         {
             using (var connection = _dbConnectionProvider.GetOpenDbConnection())
             {
-                connection.Execute("UPDATE DBO.PRODUCTS WHERE ID = @ID", new { command.IdVersion.Id.Value });
+                connection.Execute("UPDATE DBO.CUSTOMERS SET NAME = @name, SURNAME = @surname, PHONENUMBER = @phoneNumber, ADDRESS = @address WHERE ID = @ID", new { id = command.IdVersion.Id.Value, name = command.Name.Value, surname = command.Surname.Value, phoneNumber = command.PhoneNumber.Value, address = command.Address.Value });
             }
         }
     }

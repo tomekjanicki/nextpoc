@@ -4,17 +4,20 @@
 
     public sealed class RequestCustomer
     {
-        public RequestCustomer(string code, string name, decimal? price)
+        public RequestCustomer(string surname, string name, string phoneNumber, string address)
         {
-            Code = code.IfNullReplaceWithEmptyString();
+            Surname = surname.IfNullReplaceWithEmptyString();
             Name = name.IfNullReplaceWithEmptyString();
-            Price = price;
+            Address = address;
+            PhoneNumber = phoneNumber;
         }
 
-        public string Code { get; }
+        public string Surname { get; }
 
         public string Name { get;  }
 
-        public decimal? Price { get; }
+        public string PhoneNumber { get; }
+
+        public string Address { get; }
     }
 }

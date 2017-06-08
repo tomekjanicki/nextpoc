@@ -7,15 +7,14 @@
 
     public class Customer
     {
-        public Customer(PositiveInt id, Code code, Name name, NonNegativeDecimal price, DateTime? date, bool canDelete, byte[] versionInt)
+        public Customer(PositiveInt id, Surname surname, Name name, PhoneNumber phoneNumber, Address address, byte[] versionInt)
             : this()
         {
             Id = id;
-            Code = code;
+            Surname = surname;
             Name = name;
-            Price = price;
-            Date = date;
-            CanDelete = canDelete;
+            PhoneNumber = phoneNumber;
+            Address = address;
             VersionInt = versionInt;
             NonEmptyString.TryCreate(Convert.ToBase64String(versionInt), (NonEmptyString)"Value").EnsureIsNotFaliure();
         }
@@ -26,15 +25,13 @@
 
         public PositiveInt Id { get; }
 
-        public Code Code { get; }
+        public Surname Surname { get; }
 
         public Name Name { get; }
 
-        public NonNegativeDecimal Price { get; }
+        public PhoneNumber PhoneNumber { get; }
 
-        public DateTime? Date { get; }
-
-        public bool CanDelete { get; }
+        public Address Address { get; }
 
         public NonEmptyString Version => (NonEmptyString)Convert.ToBase64String(VersionInt);
 

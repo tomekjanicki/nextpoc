@@ -32,7 +32,7 @@
                 return GetFailResult((NonEmptyString)"{0} can't be empty", field);
             }
 
-            const int max = 100;
+            const int max = 50;
 
             return name.Length > max ? GetFailResult((NonEmptyString)$"{{0}} can't be longer than {max} chars.", field) : GetOkResult(new Name(name));
         }

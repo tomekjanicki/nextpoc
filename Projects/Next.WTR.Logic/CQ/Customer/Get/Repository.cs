@@ -8,7 +8,7 @@
 
     public sealed class Repository : IGetRepository<Customer>
     {
-        private const string SelectQuery = @"SELECT ID, CODE, NAME, PRICE, VERSION VERSIONINT, CASE WHEN ID < 20 THEN GETDATE() ELSE NULL END DATE, 1 CANDELETE FROM DBO.PRODUCTS WHERE ID = @ID";
+        private const string SelectQuery = @"SELECT ID, NAME, SURNAME, PHONENUMBER, ADDRESS, VERSION VERSIONINT FROM DBO.CUSTOMERS WHERE ID = @ID";
 
         private readonly IDbConnectionProvider _dbConnectionProvider;
 

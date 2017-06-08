@@ -4,7 +4,6 @@
     using Database.Interfaces;
     using Interfaces;
     using Types;
-    using ValueObjects;
 
     public sealed class Repository : IRepository
     {
@@ -15,19 +14,11 @@
             _dbConnectionProvider = dbConnectionProvider;
         }
 
-        public bool CodeExists(Code code)
-        {
-            using (var connection = _dbConnectionProvider.GetOpenDbConnection())
-            {
-                return connection.QuerySingle<bool>("SELECT CAST(COUNT(*) AS BIT) FROM DBO.PRODUCTS WHERE CODE = @code;", new { code = code.Value });
-            }
-        }
-
         public PositiveInt Insert(Command command)
         {
             using (var connection = _dbConnectionProvider.GetOpenDbConnection())
             {
-                return (PositiveInt)connection.QuerySingle<int>(@"INSERT INTO DBO.PRODUCTS (CODE, NAME, PRICE) VALUES (@code, @name, @price) SELECT SCOPE_IDENTITY()", new { code = command.Code.Value, name = command.Name.Value, price = command.Price.Value });
+                return (PositiveInt)connection.QuerySingle<int>(@"INSERT INTO DBO.CUSTOMERS (SURNAME, NAME, PHONENUMBER, ADDRESS) VALUES (@surname, @name, @phoneNumber, @address) SELECT SCOPE_IDENTITY()", new { surname = command.Surname.Value, name = command.Name.Value, phoneNumber = command.PhoneNumber.Value, address = command.Address.Value });
             }
         }
     }

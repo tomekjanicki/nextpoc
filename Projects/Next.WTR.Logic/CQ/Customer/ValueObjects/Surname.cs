@@ -3,38 +3,38 @@
     using Types;
     using Types.FunctionalExtensions;
 
-    public sealed class Code : SimpleClassValueObject<Code, string>
+    public sealed class Surname : SimpleClassValueObject<Surname, string>
     {
-        private Code(string value)
+        private Surname(string value)
             : base(value)
         {
         }
 
-        public static explicit operator Code(string value)
+        public static explicit operator Surname(string value)
         {
             return GetValueWhenSuccessOrThrowInvalidCastException(() => TryCreate(value, (NonEmptyString)"Value"));
         }
 
-        public static implicit operator string(Code code)
+        public static implicit operator string(Surname surname)
         {
-            return code.Value;
+            return surname.Value;
         }
 
-        public static implicit operator NonEmptyString(Code value)
+        public static implicit operator NonEmptyString(Surname value)
         {
             return GetValueWhenSuccessOrThrowInvalidCastException(() => NonEmptyString.TryCreate(value, (NonEmptyString)"Value"));
         }
 
-        public static IResult<Code, NonEmptyString> TryCreate(string code, NonEmptyString field)
+        public static IResult<Surname, NonEmptyString> TryCreate(string surname, NonEmptyString field)
         {
-            if (code == string.Empty)
+            if (surname == string.Empty)
             {
                 return GetFailResult((NonEmptyString)"{0} can't be empty", field);
             }
 
             const int max = 50;
 
-            return code.Length > max ? GetFailResult((NonEmptyString)$"{{0}} can't be longer than {max} chars.", field) : GetOkResult(new Code(code));
+            return surname.Length > max ? GetFailResult((NonEmptyString)$"{{0}} can't be longer than {max} chars.", field) : GetOkResult(new Surname(surname));
         }
     }
 }

@@ -66,7 +66,6 @@
     <Compile Include="..\..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="CQ\Customer\Delete\CommandHandlerTests.cs" />
     <Compile Include="CQ\Customer\Delete\CommandTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Mappings\MappingTests.cs" />

@@ -11,49 +11,54 @@
 
     public sealed class Command : BaseCommandQuery<Command>, IRequest<IResult<PositiveInt, Error>>
     {
-        private Command(Name name, Code code, NonNegativeDecimal price, Guid commandId)
+        private Command(Name name, Surname surname, PhoneNumber phoneNumber, Address address, Guid commandId)
             : base(commandId)
         {
             Name = name;
-            Code = code;
-            Price = price;
+            Surname = surname;
+            PhoneNumber = phoneNumber;
+            Address = address;
         }
 
         public Name Name { get; }
 
-        public Code Code { get; }
+        public Surname Surname { get; }
 
-        public NonNegativeDecimal Price { get; }
+        public PhoneNumber PhoneNumber { get; }
 
-        public static IResult<Command, NonEmptyString> TryCreate(string name, string code, decimal? price)
+        public Address Address { get; }
+
+        public static IResult<Command, NonEmptyString> TryCreate(string name, string surname, string phoneNumber, string address)
         {
-            return TryCreate(name, code, price, Guid.NewGuid());
+            return TryCreate(name, surname, phoneNumber, address, Guid.NewGuid());
         }
 
-        public static IResult<Command, NonEmptyString> TryCreate(string name, string code, decimal? price, Guid commandId)
+        public static IResult<Command, NonEmptyString> TryCreate(string name, string surname, string phoneNumber, string address, Guid commandId)
         {
             var nameResult = Name.TryCreate(name, (NonEmptyString)nameof(Name));
-            var codeResult = Code.TryCreate(code, (NonEmptyString)nameof(Code));
-            var priceResult = NonNegativeDecimal.TryCreate(price, (NonEmptyString)nameof(Price));
+            var codeResult = Surname.TryCreate(surname, (NonEmptyString)nameof(Surname));
+            var phoneNumberResult = PhoneNumber.TryCreate(phoneNumber, (NonEmptyString)nameof(PhoneNumber));
+            var addressResult = Address.TryCreate(address, (NonEmptyString)nameof(Address));
 
             var result = new IResult<NonEmptyString>[]
             {
                 codeResult,
-                priceResult,
-                nameResult
+                phoneNumberResult,
+                nameResult,
+                addressResult
             }.IfAtLeastOneFailCombineElseReturnOk();
 
-            return result.OnSuccess(() => GetOkResult(new Command(nameResult.Value, codeResult.Value, priceResult.Value, commandId)));
+            return result.OnSuccess(() => GetOkResult(new Command(nameResult.Value, codeResult.Value, phoneNumberResult.Value, addressResult.Value, commandId)));
         }
 
         protected override bool EqualsCore(Command other)
         {
-            return base.EqualsCore(other) && Name == other.Name && Code == other.Code && Price == other.Price;
+            return base.EqualsCore(other) && Name == other.Name && Surname == other.Surname && PhoneNumber == other.PhoneNumber && Address == other.Address;
         }
 
         protected override int GetHashCodeCore()
         {
-            return GetCalculatedHashCode(new object[] { Name, Code, Price, CommandId }.ToImmutableList());
+            return GetCalculatedHashCode(new object[] { Name, Surname, PhoneNumber, Address, CommandId }.ToImmutableList());
         }
     }
 }

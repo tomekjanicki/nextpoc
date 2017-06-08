@@ -18,7 +18,7 @@ namespace Next.WTR.Logic.Facades.Apis
 
         public IResult<Error> Put(int id, RequestCustomer requestCustomer)
         {
-            var commandResult = Command.TryCreate(id, requestCustomer.Version, requestCustomer.Price, requestCustomer.Name);
+            var commandResult = Command.TryCreate(id, requestCustomer.Version, requestCustomer.Name, requestCustomer.Surname, requestCustomer.PhoneNumber, requestCustomer.Address);
 
             return Helper.Update(_mediator, commandResult);
         }

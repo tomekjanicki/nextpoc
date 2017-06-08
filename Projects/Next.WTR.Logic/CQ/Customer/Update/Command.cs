@@ -13,49 +13,59 @@
 
     public sealed class Command : BaseCommandQuery<Command>, IRequest<IResult<Error>>, IIdVersion
     {
-        private Command(IdVersion idVersion, NonNegativeDecimal price, Name name, Guid commandId)
+        private Command(IdVersion idVersion, Surname surname, Name name, PhoneNumber phoneNumber, Address address, Guid commandId)
             : base(commandId)
         {
             IdVersion = idVersion;
-            Price = price;
+            Surname = surname;
             Name = name;
+            PhoneNumber = phoneNumber;
+            Address = address;
         }
 
         public IdVersion IdVersion { get; }
 
-        public NonNegativeDecimal Price { get; }
-
         public Name Name { get; }
 
-        public static IResult<Command, NonEmptyString> TryCreate(int id, string version, decimal? price, string name)
+        public Surname Surname { get; }
+
+        public Address Address { get; }
+
+        public PhoneNumber PhoneNumber { get; }
+
+        public static IResult<Command, NonEmptyString> TryCreate(int id, string version, string name, string surname, string phoneNumber, string address)
         {
-            return TryCreate(id, version, price, name, Guid.NewGuid());
+            return TryCreate(id, version, name, surname, phoneNumber, address, Guid.NewGuid());
         }
 
-        public static IResult<Command, NonEmptyString> TryCreate(int id, string version, decimal? price, string name, Guid commandId)
+        public static IResult<Command, NonEmptyString> TryCreate(int id, string version, string name, string surname, string phoneNumber, string address, Guid commandId)
         {
             var idVersionResult = IdVersion.TryCreate(id, version, (NonEmptyString)nameof(Common.ValueObjects.IdVersion.Id), (NonEmptyString)nameof(Common.ValueObjects.IdVersion.Version));
-            var priceResult = NonNegativeDecimal.TryCreate(price, (NonEmptyString)nameof(Price));
+            var surnameResult = Surname.TryCreate(surname, (NonEmptyString)nameof(Surname));
             var nameResult = Name.TryCreate(name, (NonEmptyString)nameof(Name));
+            var phoneNameResult = PhoneNumber.TryCreate(phoneNumber, (NonEmptyString)nameof(PhoneNumber));
+            var addressResult = Address.TryCreate(address, (NonEmptyString)nameof(Address));
 
             var result = new IResult<NonEmptyString>[]
             {
                 idVersionResult,
-                priceResult,
-                nameResult
+                surnameResult,
+                nameResult,
+                phoneNameResult,
+                addressResult
             }.IfAtLeastOneFailCombineElseReturnOk();
 
-            return result.OnSuccess(() => GetOkResult(new Command(idVersionResult.Value, priceResult.Value, nameResult.Value, commandId)));
+            return result.OnSuccess(() => GetOkResult(new Command(idVersionResult.Value, surnameResult.Value, nameResult.Value, phoneNameResult.Value, addressResult.Value, commandId)));
         }
 
         protected override bool EqualsCore(Command other)
         {
-            return base.EqualsCore(other) && IdVersion == other.IdVersion && Price == other.Price && Name == other.Name;
+            return base.EqualsCore(other) && IdVersion == other.IdVersion && Surname == other.Surname && Name == other.Name && PhoneNumber == other.PhoneNumber && Address == other.Address;
         }
 
         protected override int GetHashCodeCore()
         {
-            return GetCalculatedHashCode(new object[] { IdVersion, Price, Name, CommandId }.ToImmutableList());
+            return GetCalculatedHashCode(new object[] { IdVersion, Surname, Name, PhoneNumber, Address, CommandId }.ToImmutableList());
         }
     }
 }

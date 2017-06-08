@@ -24,15 +24,17 @@
         public void Customer_Should_Map_To_CustomerDto()
         {
             const int id = 1;
-            const string code = "code";
+            const string surname = "surname";
             const string name = "name";
-            const decimal price = 5.22M;
-            var source = new Customer((PositiveInt)id, (Code)code, (Name)name, (NonNegativeDecimal)price, null, true, new byte[] { 1 });
+            const string phoneNumber = "phoneNumber";
+            const string address = "address";
+            var source = new Customer((PositiveInt)id, (Surname)surname, (Name)name, (PhoneNumber)phoneNumber, (Address)address, new byte[] { 1 });
             var result = _mapper.Map<ResponseCustomer>(source);
             result.Id.ShouldBe(id);
-            result.Code.ShouldBe(code);
+            result.Surname.ShouldBe(surname);
             result.Name.ShouldBe(name);
-            result.Price.ShouldBe(price);
+            result.PhoneNumber.ShouldBe(phoneNumber);
+            result.Address.ShouldBe(address);
             result.Version.ShouldNotBeNullOrEmpty();
         }
     }

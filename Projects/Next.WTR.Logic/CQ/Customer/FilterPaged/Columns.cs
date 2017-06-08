@@ -12,9 +12,10 @@
             return new Dictionary<NonEmptyString, NonEmptyString>
             {
                 { (NonEmptyString)nameof(ResponseCustomer.Id), (NonEmptyString)"ID" },
-                { (NonEmptyString)nameof(ResponseCustomer.Code), (NonEmptyString)"CODE" },
+                { (NonEmptyString)nameof(ResponseCustomer.Surname), (NonEmptyString)"SURNAME" },
                 { (NonEmptyString)nameof(ResponseCustomer.Name), (NonEmptyString)"NAME" },
-                { (NonEmptyString)nameof(ResponseCustomer.Price), (NonEmptyString)"PRICE" }
+                { (NonEmptyString)nameof(ResponseCustomer.PhoneNumber), (NonEmptyString)"PHONENUMBER" },
+                { (NonEmptyString)nameof(ResponseCustomer.Address), (NonEmptyString)"ADDRESS" }
             }.ToImmutableDictionary();
         }
 
