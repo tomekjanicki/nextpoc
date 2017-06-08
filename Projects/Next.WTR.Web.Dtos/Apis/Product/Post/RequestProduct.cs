@@ -2,7 +2,7 @@
 {
     using Common.Dtos;
 
-    public class RequestProduct
+    public sealed class RequestProduct
     {
         public RequestProduct(string code, string name, decimal? price)
         {

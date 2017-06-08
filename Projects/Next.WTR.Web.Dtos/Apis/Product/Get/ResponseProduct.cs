@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class ResponseProduct
+    public sealed class ResponseProduct
     {
         public ResponseProduct(int id, string code, string name, decimal price, DateTime? date, bool canDelete, string version)
         {

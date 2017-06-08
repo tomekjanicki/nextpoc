@@ -7,7 +7,7 @@
         public static void Execute(HttpConfiguration configuration)
         {
             configuration.MapHttpAttributeRoutes();
-            configuration.Routes.MapHttpRoute("DefaultApi", "api/{controller}/{id}", new { id = RouteParameter.Optional });
+            configuration.Routes.MapHttpRoute("DefaultApi", "{controller}/{id}", new { id = RouteParameter.Optional });
         }
     }
 }
