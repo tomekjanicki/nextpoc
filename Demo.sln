@@ -7,23 +7,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{92
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8A636113-5D27-43DF-A291-5B66EB1DA71F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Web", "Projects\Next.WTR.Web\Demo.Web.csproj", "{CFD858E7-4A1B-423B-8DFA-E68D0CD4E6EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Web", "Projects\Demo.Web\Demo.Web.csproj", "{CFD858E7-4A1B-423B-8DFA-E68D0CD4E6EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Web.Dtos", "Projects\Next.WTR.Web.Dtos\Demo.Web.Dtos.csproj", "{D383FC01-3AB8-4106-98EA-543607ACE0E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Web.Dtos", "Projects\Demo.Web.Dtos\Demo.Web.Dtos.csproj", "{D383FC01-3AB8-4106-98EA-543607ACE0E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Common", "Projects\Next.WTR.Common\Demo.Common.csproj", "{B97EFB86-FB8B-43B7-9892-D4E2AF7257B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Common", "Projects\Demo.Common\Demo.Common.csproj", "{B97EFB86-FB8B-43B7-9892-D4E2AF7257B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Logic", "Projects\Next.WTR.Logic\Demo.Logic.csproj", "{AC510806-42A1-4B3F-8A6C-97B96398D475}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Logic", "Projects\Demo.Logic\Demo.Logic.csproj", "{AC510806-42A1-4B3F-8A6C-97B96398D475}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Common.Web", "Projects\Next.WTR.Common.Web\Demo.Common.Web.csproj", "{800FD538-82D0-43DF-8D2C-618C2327B15E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Common.Web", "Projects\Demo.Common.Web\Demo.Common.Web.csproj", "{800FD538-82D0-43DF-8D2C-618C2327B15E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Types", "Projects\Next.WTR.Types\Demo.Types.csproj", "{9033BA8A-C531-4DCD-A342-A4B57DDD11D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Types", "Projects\Demo.Types\Demo.Types.csproj", "{9033BA8A-C531-4DCD-A342-A4B57DDD11D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Common.Tests", "Tests\Next.WTR.Common.Tests\Demo.Common.Tests.csproj", "{84A5575A-9B9F-4548-868F-CA986573E305}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Common.Tests", "Tests\Demo.Common.Tests\Demo.Common.Tests.csproj", "{84A5575A-9B9F-4548-868F-CA986573E305}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Logic.Tests", "Tests\Next.WTR.Logic.Tests\Demo.Logic.Tests.csproj", "{1606C136-76FC-44E7-A36C-DD7BDC4C33A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Logic.Tests", "Tests\Demo.Logic.Tests\Demo.Logic.Tests.csproj", "{1606C136-76FC-44E7-A36C-DD7BDC4C33A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Types.Tests", "Tests\Next.WTR.Types.Tests\Demo.Types.Tests.csproj", "{CC8DD834-7317-4928-ABCE-ED4A0A99D8D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Types.Tests", "Tests\Demo.Types.Tests\Demo.Types.Tests.csproj", "{CC8DD834-7317-4928-ABCE-ED4A0A99D8D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Items", "Items", "{0DAD39A1-9848-4CD3-A1C6-2785F969FAE8}"
 	ProjectSection(SolutionItems) = preProject
@@ -31,13 +31,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Items", "Items", "{0DAD39A1
 		script.sql = script.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Common.Web.Tests", "Tests\Next.WTR.Common.Web.Tests\Demo.Common.Web.Tests.csproj", "{F34C0E7A-3420-47F1-9F92-A24EA76E5E5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Common.Web.Tests", "Tests\Demo.Common.Web.Tests\Demo.Common.Web.Tests.csproj", "{F34C0E7A-3420-47F1-9F92-A24EA76E5E5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Web.Tests", "Tests\Next.WTR.Web.Tests\Demo.Web.Tests.csproj", "{1E1063E7-0934-4C11-AFDB-99DF50DC1FA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Web.Tests", "Tests\Demo.Web.Tests\Demo.Web.Tests.csproj", "{1E1063E7-0934-4C11-AFDB-99DF50DC1FA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Common.Test", "Projects\Next.WTR.Common.Test\Demo.Common.Test.csproj", "{61886C59-7EE1-432F-8C04-5B6B97C45032}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Common.Test", "Projects\Demo.Common.Test\Demo.Common.Test.csproj", "{61886C59-7EE1-432F-8C04-5B6B97C45032}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Common.Dtos", "Projects\Next.WTR.Common.Dtos\Demo.Common.Dtos.csproj", "{01E0946A-2E00-431F-903A-B0F101422227}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Common.Dtos", "Projects\Demo.Common.Dtos\Demo.Common.Dtos.csproj", "{01E0946A-2E00-431F-903A-B0F101422227}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

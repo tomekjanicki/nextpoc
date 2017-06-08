@@ -114,19 +114,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Next.WTR.Common.Dtos\Demo.Common.Dtos.csproj">
+    <ProjectReference Include="..\Demo.Common.Dtos\Demo.Common.Dtos.csproj">
       <Project>{01e0946a-2e00-431f-903a-b0f101422227}</Project>
       <Name>Demo.Common.Dtos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Next.WTR.Common\Demo.Common.csproj">
+    <ProjectReference Include="..\Demo.Common\Demo.Common.csproj">
       <Project>{B97EFB86-FB8B-43B7-9892-D4E2AF7257B6}</Project>
       <Name>Demo.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Next.WTR.Types\Demo.Types.csproj">
+    <ProjectReference Include="..\Demo.Types\Demo.Types.csproj">
       <Project>{9033BA8A-C531-4DCD-A342-A4B57DDD11D9}</Project>
       <Name>Demo.Types</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Next.WTR.Web.Dtos\Demo.Web.Dtos.csproj">
+    <ProjectReference Include="..\Demo.Web.Dtos\Demo.Web.Dtos.csproj">
       <Project>{D383FC01-3AB8-4106-98EA-543607ACE0E9}</Project>
       <Name>Demo.Web.Dtos</Name>
     </ProjectReference>

@@ -63,7 +63,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Next.WTR.Common.Dtos\Demo.Common.Dtos.csproj">
+    <ProjectReference Include="..\Demo.Common.Dtos\Demo.Common.Dtos.csproj">
       <Project>{01E0946A-2E00-431F-903A-B0F101422227}</Project>
       <Name>Demo.Common.Dtos</Name>
     </ProjectReference>
