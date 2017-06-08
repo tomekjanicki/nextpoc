@@ -1,4 +1,4 @@
-﻿namespace Demo.Web.Dtos.Apis.Customer.Put
+﻿namespace Demo.WebApi.Dtos.Apis.Customer.Put
 {
     using Common.Dtos;
 

@@ -96,9 +96,9 @@
       <Project>{9033BA8A-C531-4DCD-A342-A4B57DDD11D9}</Project>
       <Name>Demo.Types</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Projects\Demo.Web.Dtos\Demo.Web.Dtos.csproj">
+    <ProjectReference Include="..\..\Projects\Demo.Web.Dtos\Demo.WebApi.Dtos.csproj">
       <Project>{d383fc01-3ab8-4106-98ea-543607ace0e9}</Project>
-      <Name>Demo.Web.Dtos</Name>
+      <Name>Demo.WebApi.Dtos</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,7 @@
     using Common.Shared;
     using CQ.Customer.FilterPaged;
     using Types.FunctionalExtensions;
-    using Web.Dtos.Apis.Customer.FilterPaged;
+    using WebApi.Dtos.Apis.Customer.FilterPaged;
 
     public sealed class CustomersFilterPagedFacade
     {

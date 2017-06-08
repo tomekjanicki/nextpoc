@@ -1,4 +1,4 @@
-﻿namespace Demo.Web
+﻿namespace Demo.WebApi
 {
     using System.Linq;
     using System.Net.Http.Formatting;

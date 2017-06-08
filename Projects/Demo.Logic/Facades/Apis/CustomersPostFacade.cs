@@ -7,7 +7,7 @@ namespace Demo.Logic.Facades.Apis
     using CQ.Customer.Insert;
     using Types;
     using Types.FunctionalExtensions;
-    using Web.Dtos.Apis.Customer.Post;
+    using WebApi.Dtos.Apis.Customer.Post;
 
     public sealed class CustomersPostFacade
     {

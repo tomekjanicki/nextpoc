@@ -1,3 +1,3 @@
 ﻿using System.Reflection;
-[assembly: AssemblyTitle("Demo.Web.Dtos")]
-[assembly: AssemblyProduct("Demo.Web.Dtos")]
+[assembly: AssemblyTitle("Demo.WebApi.Dtos")]
+[assembly: AssemblyProduct("Demo.WebApi.Dtos")]

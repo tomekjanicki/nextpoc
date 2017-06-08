@@ -1,4 +1,4 @@
-﻿namespace Demo.Web.Apis
+﻿namespace Demo.WebApi.Apis
 {
     using System.Web.Http;
     using Common.Web.Infrastructure;

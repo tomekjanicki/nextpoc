@@ -8,7 +8,7 @@
     using NUnit.Framework;
     using Shouldly;
     using Types;
-    using Web.Dtos.Apis.Customer.Get;
+    using WebApi.Dtos.Apis.Customer.Get;
 
     public class MappingTests
     {

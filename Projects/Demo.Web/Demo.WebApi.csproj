@@ -12,8 +12,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demo.Web</RootNamespace>
-    <AssemblyName>Demo.Web</AssemblyName>
+    <RootNamespace>Demo.WebApi</RootNamespace>
+    <AssemblyName>Demo.WebApi</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -250,9 +250,9 @@
       <Project>{800FD538-82D0-43DF-8D2C-618C2327B15E}</Project>
       <Name>Demo.Common.Web</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Demo.Web.Dtos\Demo.Web.Dtos.csproj">
+    <ProjectReference Include="..\Demo.Web.Dtos\Demo.WebApi.Dtos.csproj">
       <Project>{D383FC01-3AB8-4106-98EA-543607ACE0E9}</Project>
-      <Name>Demo.Web.Dtos</Name>
+      <Name>Demo.WebApi.Dtos</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

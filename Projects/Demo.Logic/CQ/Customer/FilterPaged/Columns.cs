@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using System.Collections.Immutable;
     using Types;
-    using Web.Dtos.Apis.Customer.FilterPaged;
+    using WebApi.Dtos.Apis.Customer.FilterPaged;
 
     public static class Columns
     {

@@ -1,4 +1,4 @@
-﻿namespace Demo.Web
+﻿namespace Demo.WebApi
 {
     using System.Web.Http;
     using Common.Log4Net;

@@ -1,4 +1,4 @@
-﻿namespace Demo.Web.Dtos.Apis.Customer.Post
+﻿namespace Demo.WebApi.Dtos.Apis.Customer.Post
 {
     using Common.Dtos;
 

@@ -6,7 +6,7 @@
     using Common.Dtos;
     using Common.Mappings.TypeConverters;
     using CQ.Customer.FilterPaged;
-    using Web.Dtos.Apis.Customer.FilterPaged;
+    using WebApi.Dtos.Apis.Customer.FilterPaged;
 
     public static class AutoMapperConfiguration
     {
@@ -16,7 +16,7 @@
             expression.CreateMap(typeof(IEnumerable<>), typeof(ImmutableList<>)).ConvertUsing(typeof(ImmutableListConverter<,>));
 
             expression.CreateMap<Customer, ResponseCustomer>();
-            expression.CreateMap<CQ.Customer.Get.Customer, Web.Dtos.Apis.Customer.Get.ResponseCustomer>();
+            expression.CreateMap<CQ.Customer.Get.Customer, WebApi.Dtos.Apis.Customer.Get.ResponseCustomer>();
         }
     }
 }

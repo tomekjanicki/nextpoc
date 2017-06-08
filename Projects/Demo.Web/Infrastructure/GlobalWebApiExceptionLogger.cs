@@ -1,4 +1,4 @@
-﻿namespace Demo.Web.Infrastructure
+﻿namespace Demo.WebApi.Infrastructure
 {
     using System.Web.Http.ExceptionHandling;
     using Common.Log4Net;

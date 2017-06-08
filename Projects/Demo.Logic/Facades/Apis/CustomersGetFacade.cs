@@ -6,7 +6,7 @@
     using Common.Shared;
     using CQ.Customer.Get;
     using Types.FunctionalExtensions;
-    using Web.Dtos.Apis.Customer.Get;
+    using WebApi.Dtos.Apis.Customer.Get;
 
     public sealed class CustomersGetFacade
     {

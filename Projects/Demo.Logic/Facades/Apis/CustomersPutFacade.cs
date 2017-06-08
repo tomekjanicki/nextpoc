@@ -5,7 +5,7 @@ namespace Demo.Logic.Facades.Apis
     using Common.Shared;
     using CQ.Customer.Update;
     using Types.FunctionalExtensions;
-    using Web.Dtos.Apis.Customer.Put;
+    using WebApi.Dtos.Apis.Customer.Put;
 
     public sealed class CustomersPutFacade
     {
