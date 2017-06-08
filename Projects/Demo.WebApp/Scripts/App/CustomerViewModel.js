@@ -5,8 +5,9 @@
 
     self.testClick = function () {
         alert("ala ma kota");
-        ajaxGet("customers/1",
+        ajaxGet("customers/?top=100&skip=0",
             function (data) {
+                alert("ok");
                 alert(data);
             }),
             function () {
