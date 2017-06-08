@@ -8,8 +8,8 @@
         {
             Surname = surname.IfNullReplaceWithEmptyString();
             Name = name.IfNullReplaceWithEmptyString();
-            Address = address;
-            PhoneNumber = phoneNumber;
+            Address = address.IfNullReplaceWithEmptyString();
+            PhoneNumber = phoneNumber.IfNullReplaceWithEmptyString();
         }
 
         public string Surname { get; }
