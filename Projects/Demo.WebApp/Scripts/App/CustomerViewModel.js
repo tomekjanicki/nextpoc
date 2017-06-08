@@ -58,7 +58,15 @@ function CustomerViewModel(baseUrl) {
 
     self.backToList = function() {
         self.listVisible(true);
-        self.insertOrUpdateVisible(false);        
+        self.insertOrUpdateVisible(false);
+        self.customer(null);
+    }
+
+    self.addCustomer = function() {
+        var observableCustomer = new ObservableCustomer(0, "", "", "", "", "");
+        self.customer(observableCustomer);
+        self.listVisible(false);
+        self.insertOrUpdateVisible(true);        
     }
 
     self.editCustomer = function(customer) {
@@ -72,6 +80,40 @@ function CustomerViewModel(baseUrl) {
             function () {
                 alert("error");
             });
+    }
+
+    self.insertOrUpdateCustomer = function () {
+        var version = self.customer().version();
+        if (version === "") {
+            var postData = '{ "name": "' + self.customer().name() + '", "surname": "' + self.customer().surname() + '", "phoneNumber": "' + self.customer().phoneNumber() + '", "address": "' + self.customer().address() + '" }';
+            ajaxPostOrPut("POST",
+                "customers/",
+                postData,
+                function () {
+                    self.listVisible(true);
+                    self.insertOrUpdateVisible(false);
+                    self.initCustomers();
+                    self.customer(null);
+                },
+                function () {
+                    alert("error");
+                });            
+        } else {
+            var putData = '{ "name": "' + self.customer().name() + '", "surname": "' + self.customer().surname() + '", "phoneNumber": "' + self.customer().phoneNumber() + '", "address": "' + self.customer().address() + '", "version": "' + self.customer().version() + '" }';
+            ajaxPostOrPut("PUT",
+                "customers/" + self.customer().id(),
+                putData,
+                function () {
+                    self.listVisible(true);
+                    self.insertOrUpdateVisible(false);
+                    self.initCustomers();
+                    self.customer(null);
+                },
+                function () {
+                    alert("error");
+                });            
+        }
+
     }
 
     function ajaxGetOrDelete(method, endpoint, doneFn, failFn) {

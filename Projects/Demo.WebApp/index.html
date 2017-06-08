@@ -7,6 +7,7 @@
 </head>
 <body>
     <div data-bind="visible: listVisible">
+        <input type="button" class="btn btn-info" value="Add" data-bind="click: addCustomer" />
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -50,6 +51,7 @@
                 <td><input type="text" data-bind="value: customer().address" /></td>
             </tr>
         </table>
+        <input type="button" class="btn btn-info" value="Save" data-bind="click: insertOrUpdateCustomer" />
     </div>
     <script src="Scripts/jquery-3.1.1.js"></script>
     <script src="Scripts/knockout-3.4.2.debug.js"></script>
