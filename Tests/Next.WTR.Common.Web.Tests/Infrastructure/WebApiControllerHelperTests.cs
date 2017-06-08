@@ -98,40 +98,40 @@
         }
 
         [Test]
-        public void GetHttpActionResultForUpdate_Ok_ShouldReturnOkResult()
+        public void GetHttpActionResultForPut_Ok_ShouldReturnOkResult()
         {
             var result = Result<Error>.Ok();
-            var actionResult = WebApiControllerHelper.GetHttpActionResultForUpdate(result, GetController());
+            var actionResult = WebApiControllerHelper.GetHttpActionResultForPut(result, GetController());
             var okResult = actionResult as OkResult;
             okResult.ShouldNotBeNull();
         }
 
         [Test]
-        public void GetHttpActionResultForUpdate_Generic_ShouldReturnBadRequestErrorMessageResult()
+        public void GetHttpActionResultForPut_Generic_ShouldReturnBadRequestErrorMessageResult()
         {
             const string error = "error";
             var result = ((NonEmptyString)error).ToGeneric();
-            var actionResult = WebApiControllerHelper.GetHttpActionResultForUpdate(result, GetController());
+            var actionResult = WebApiControllerHelper.GetHttpActionResultForPut(result, GetController());
             var badRequestErrorMessageResult = actionResult as BadRequestErrorMessageResult;
             badRequestErrorMessageResult.ShouldNotBeNull();
             badRequestErrorMessageResult.Message.ShouldBe(error);
         }
 
         [Test]
-        public void GetHttpActionResultForUpdate_NotFound_ShouldReturnNotFoundResult()
+        public void GetHttpActionResultForPut_NotFound_ShouldReturnNotFoundResult()
         {
             var result = ((NonEmptyString)"error").ToNotFound();
-            var actionResult = WebApiControllerHelper.GetHttpActionResultForUpdate(result, GetController());
+            var actionResult = WebApiControllerHelper.GetHttpActionResultForPut(result, GetController());
             var notFoundResult = actionResult as StatusCodeTextPlainActionResult;
             notFoundResult.ShouldNotBeNull();
             notFoundResult.StatusCode.ShouldBe(HttpStatusCode.NotFound);
         }
 
         [Test]
-        public void GetHttpActionResultForUpdate_RowVersionMismatch_ShouldReturnStatusCodeResult()
+        public void GetHttpActionResultForPut_RowVersionMismatch_ShouldReturnStatusCodeResult()
         {
             var result = ((NonEmptyString)"error").ToRowVersionMismatch();
-            var actionResult = WebApiControllerHelper.GetHttpActionResultForUpdate(result, GetController());
+            var actionResult = WebApiControllerHelper.GetHttpActionResultForPut(result, GetController());
             var statusCodeResult = actionResult as StatusCodeTextPlainActionResult;
             statusCodeResult.ShouldNotBeNull();
             statusCodeResult.StatusCode.ShouldBe(HttpStatusCode.PreconditionFailed);

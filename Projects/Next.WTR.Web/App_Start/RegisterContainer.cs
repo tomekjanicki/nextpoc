@@ -34,9 +34,25 @@
 
             RegisterSingletons(container);
 
+            RegisterScoped(container);
+
             container.Verify();
 
             configuration.DependencyResolver = new SimpleInjectorWebApiDependencyResolver(container);
+        }
+
+        private static void RegisterScoped(Container container)
+        {
+            var lifeStyle = Lifestyle.Scoped;
+            container.Register<Logic.CQ.Product.Delete.Interfaces.IRepository, Logic.CQ.Product.Delete.Repository>(lifeStyle);
+            container.Register<IUpdateRepository<Logic.CQ.Product.Update.Command>, Logic.CQ.Product.Update.Repository>(lifeStyle);
+            container.Register<Logic.CQ.Product.Insert.Interfaces.IRepository, Logic.CQ.Product.Insert.Repository>(lifeStyle);
+            container.Register<IGetRepository<Logic.CQ.Product.Get.Product>, Logic.CQ.Product.Get.Repository>(lifeStyle);
+            var concreteTypes = GetConcreteTypes();
+            concreteTypes.ForEach(type => container.Register(type, type, lifeStyle));
+            var assemblies = GetAssemblies();
+            container.Register(typeof(IRequestHandler<,>), assemblies, lifeStyle);
+            container.Register(typeof(IVoidRequestHandler<>), assemblies, lifeStyle);
         }
 
         private static void RegisterSingletons(Container container)
@@ -47,18 +63,6 @@
             container.RegisterSingleton<IDbConnectionProvider, DbConnectionProvider>();
             container.RegisterSingleton<IEntryAssemblyProvider, EntryAssemblyProvider>();
             container.RegisterSingleton(() => Helper.GetMapper(AutoMapperConfiguration.Configure));
-
-            // todo consider go back to scoped lifestyle
-            container.RegisterSingleton<Logic.CQ.Product.Delete.Interfaces.IRepository, Logic.CQ.Product.Delete.Repository>();
-            container.RegisterSingleton<IUpdateRepository<Logic.CQ.Product.Update.Command>, Logic.CQ.Product.Update.Repository>();
-            container.RegisterSingleton<Logic.CQ.Product.Insert.Interfaces.IRepository, Logic.CQ.Product.Insert.Repository>();
-            container.RegisterSingleton<IGetRepository<Logic.CQ.Product.Get.Product>, Logic.CQ.Product.Get.Repository>();
-            var concreteTypes = GetConcreteTypes();
-            concreteTypes.ForEach(type => container.RegisterSingleton(type, type));
-            var lifeStyle = Lifestyle.Singleton;
-            var assemblies = GetAssemblies();
-            container.Register(typeof(IRequestHandler<,>), assemblies, lifeStyle);
-            container.Register(typeof(IVoidRequestHandler<>), assemblies, lifeStyle);
         }
 
         private static ImmutableList<Type> GetConcreteTypes()
@@ -69,8 +73,8 @@
                 typeof(ProductsGetFacade),
                 typeof(VersionGetFacade),
                 typeof(ProductsDeleteFacade),
-                typeof(ProductsUpdateFacade),
-                typeof(ProductsInsertFacade),
+                typeof(ProductsPutFacade),
+                typeof(ProductsPostFacade),
                 typeof(SharedQueries)
             }.ToImmutableList();
         }

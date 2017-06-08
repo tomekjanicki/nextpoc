@@ -1,14 +1,11 @@
 ﻿namespace Next.WTR.Common.Web.Infrastructure
 {
-    using System.Security.Claims;
     using System.Web.Http;
     using Shared;
     using Types.FunctionalExtensions;
 
     public abstract class BaseWebApiController : ApiController
     {
-        public new ClaimsPrincipal User => base.User as ClaimsPrincipal;
-
         protected IHttpActionResult GetHttpActionResult<T>(IResult<T, Error> result)
         {
             return WebApiControllerHelper.GetHttpActionResult(result, this);
@@ -24,9 +21,9 @@
             return WebApiControllerHelper.GetHttpActionResultForDelete(result, this);
         }
 
-        protected IHttpActionResult GetHttpActionResultForUpdate(IResult<Error> result)
+        protected IHttpActionResult GetHttpActionResultForPut(IResult<Error> result)
         {
-            return WebApiControllerHelper.GetHttpActionResultForUpdate(result, this);
+            return WebApiControllerHelper.GetHttpActionResultForPut(result, this);
         }
     }
 }

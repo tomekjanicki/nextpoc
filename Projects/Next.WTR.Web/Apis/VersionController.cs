@@ -13,7 +13,6 @@
             _versionGetFacade = versionGetFacade;
         }
 
-        [HttpGet]
         public IHttpActionResult Get()
         {
             var result = _versionGetFacade.Get();

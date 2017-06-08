@@ -85,8 +85,8 @@
     <Compile Include="CQ\Product\ValueObjects\Name.cs" />
     <Compile Include="Database\DbConnectionProvider.cs" />
     <Compile Include="Facades\Apis\ProductsDeleteFacade.cs" />
-    <Compile Include="Facades\Apis\ProductsInsertFacade.cs" />
-    <Compile Include="Facades\Apis\ProductsUpdateFacade.cs" />
+    <Compile Include="Facades\Apis\ProductsPostFacade.cs" />
+    <Compile Include="Facades\Apis\ProductsPutFacade.cs" />
     <Compile Include="Facades\Apis\ProductsFilterPagedFacade.cs" />
     <Compile Include="Facades\Apis\ProductsGetFacade.cs" />
     <Compile Include="Facades\Apis\VersionGetFacade.cs" />

@@ -5,18 +5,18 @@ namespace Next.WTR.Logic.Facades.Apis
     using Common.Shared;
     using CQ.Product.Update;
     using Types.FunctionalExtensions;
-    using Web.Dtos.Apis.Product.Update;
+    using Web.Dtos.Apis.Product.Put;
 
-    public sealed class ProductsUpdateFacade
+    public sealed class ProductsPutFacade
     {
         private readonly IMediator _mediator;
 
-        public ProductsUpdateFacade(IMediator mediator)
+        public ProductsPutFacade(IMediator mediator)
         {
             _mediator = mediator;
         }
 
-        public IResult<Error> Update(int id, RequestProduct requestProduct)
+        public IResult<Error> Put(int id, RequestProduct requestProduct)
         {
             var commandResult = Command.TryCreate(id, requestProduct.Version, requestProduct.Price, requestProduct.Name);
 

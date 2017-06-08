@@ -7,20 +7,20 @@ namespace Next.WTR.Logic.Facades.Apis
     using CQ.Product.Insert;
     using Types;
     using Types.FunctionalExtensions;
-    using Web.Dtos.Apis.Product.Insert;
+    using Web.Dtos.Apis.Product.Post;
 
-    public sealed class ProductsInsertFacade
+    public sealed class ProductsPostFacade
     {
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
 
-        public ProductsInsertFacade(IMediator mediator, IMapper mapper)
+        public ProductsPostFacade(IMediator mediator, IMapper mapper)
         {
             _mediator = mediator;
             _mapper = mapper;
         }
 
-        public IResult<int, Error> Insert(RequestProduct requestProduct)
+        public IResult<int, Error> Post(RequestProduct requestProduct)
         {
             var commandResult = Command.TryCreate(requestProduct.Name, requestProduct.Code, requestProduct.Price);
 

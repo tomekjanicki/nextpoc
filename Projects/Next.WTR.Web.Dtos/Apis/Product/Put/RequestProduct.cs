@@ -1,4 +1,4 @@
-﻿namespace Next.WTR.Web.Dtos.Apis.Product.Update
+﻿namespace Next.WTR.Web.Dtos.Apis.Product.Put
 {
     using Common.Dtos;
 

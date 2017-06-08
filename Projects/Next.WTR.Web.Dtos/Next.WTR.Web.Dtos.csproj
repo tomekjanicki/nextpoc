@@ -55,8 +55,8 @@
     </Compile>
     <Compile Include="Apis\Product\FilterPaged\ResponseProduct.cs" />
     <Compile Include="Apis\Product\Get\ResponseProduct.cs" />
-    <Compile Include="Apis\Product\Insert\RequestProduct.cs" />
-    <Compile Include="Apis\Product\Update\RequestProduct.cs" />
+    <Compile Include="Apis\Product\Post\RequestProduct.cs" />
+    <Compile Include="Apis\Product\Put\RequestProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

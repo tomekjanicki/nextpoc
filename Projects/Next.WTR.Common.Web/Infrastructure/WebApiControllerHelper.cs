@@ -24,7 +24,7 @@
             return result.IsSuccess ? new StatusCodeResult(HttpStatusCode.NoContent, apiController) : GetErrorHttpActionResult(result, apiController);
         }
 
-        public static IHttpActionResult GetHttpActionResultForUpdate(IResult<Error> result, ApiController apiController)
+        public static IHttpActionResult GetHttpActionResultForPut(IResult<Error> result, ApiController apiController)
         {
             return result.IsSuccess ? new OkResult(apiController) : GetErrorHttpActionResult(result, apiController);
         }

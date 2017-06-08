@@ -2,6 +2,7 @@
 {
     using System.Web.Http;
     using Common.Web.Infrastructure;
+    using Dtos.Apis.Product.Post;
     using Logic.Facades.Apis;
     using Types;
 
@@ -10,16 +11,16 @@
         private readonly ProductsFilterPagedFacade _productsFilterPagedFacade;
         private readonly ProductsGetFacade _productsGetFacade;
         private readonly ProductsDeleteFacade _productsDeleteFacade;
-        private readonly ProductsUpdateFacade _productsUpdateFacade;
-        private readonly ProductsInsertFacade _productsInsertFacade;
+        private readonly ProductsPutFacade _productsPutFacade;
+        private readonly ProductsPostFacade _productsPostFacade;
 
-        public ProductsController(ProductsFilterPagedFacade productsFilterPagedFacade, ProductsGetFacade productsGetFacade, ProductsDeleteFacade productsDeleteFacade, ProductsUpdateFacade productsUpdateFacade, ProductsInsertFacade productsInsertFacade)
+        public ProductsController(ProductsFilterPagedFacade productsFilterPagedFacade, ProductsGetFacade productsGetFacade, ProductsDeleteFacade productsDeleteFacade, ProductsPutFacade productsPutFacade, ProductsPostFacade productsPostFacade)
         {
             _productsFilterPagedFacade = productsFilterPagedFacade;
             _productsGetFacade = productsGetFacade;
             _productsDeleteFacade = productsDeleteFacade;
-            _productsUpdateFacade = productsUpdateFacade;
-            _productsInsertFacade = productsInsertFacade;
+            _productsPutFacade = productsPutFacade;
+            _productsPostFacade = productsPostFacade;
         }
 
         [HttpGet]
@@ -30,23 +31,20 @@
             return GetHttpActionResult(result);
         }
 
-        [HttpPost]
-        public IHttpActionResult Update(int id, Dtos.Apis.Product.Update.RequestProduct requestProduct)
+        public IHttpActionResult Put(int id, Dtos.Apis.Product.Put.RequestProduct requestProduct)
         {
-            var result = _productsUpdateFacade.Update(id, requestProduct);
+            var result = _productsPutFacade.Put(id, requestProduct);
 
-            return GetHttpActionResultForUpdate(result);
+            return GetHttpActionResultForPut(result);
         }
 
-        [HttpPost]
-        public IHttpActionResult Insert(Dtos.Apis.Product.Insert.RequestProduct requestProduct)
+        public IHttpActionResult Post(RequestProduct requestProduct)
         {
-            var result = _productsInsertFacade.Insert(requestProduct);
+            var result = _productsPostFacade.Post(requestProduct);
 
             return GetHttpActionResult(result);
         }
 
-        [HttpGet]
         public IHttpActionResult Get(int id)
         {
             var result = _productsGetFacade.Get(id);
@@ -54,7 +52,6 @@
             return GetHttpActionResult(result);
         }
 
-        [HttpPost]
         public IHttpActionResult Delete(int id, string version)
         {
             var result = _productsDeleteFacade.Delete(id, version.IfNullReplaceWithEmptyString());
