@@ -26,13 +26,14 @@
         }
 
         [Test]
-        public void GetHttpActionResult_Generic_ShouldReturnBadRequestErrorMessageResult()
+        public void GetHttpActionResult_Generic_ShouldReturnBadRequestResult()
         {
             const string error = "error";
             var result = ((NonEmptyString)error).ToGeneric<string>();
             var actionResult = WebApiControllerHelper.GetHttpActionResult(result, GetController());
-            var badRequestErrorMessageResult = actionResult as BadRequestErrorMessageResult;
+            var badRequestErrorMessageResult = actionResult as StatusCodeTextPlainActionResult;
             badRequestErrorMessageResult.ShouldNotBeNull();
+            badRequestErrorMessageResult.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             badRequestErrorMessageResult.Message.ShouldBe(error);
         }
 
@@ -67,13 +68,14 @@
         }
 
         [Test]
-        public void GetHttpActionResultForDelete_Generic_ShouldReturnBadRequestErrorMessageResult()
+        public void GetHttpActionResultForDelete_Generic_ShouldReturnBadRequestResult()
         {
             const string error = "error";
             var result = ((NonEmptyString)error).ToGeneric();
             var actionResult = WebApiControllerHelper.GetHttpActionResultForDelete(result, GetController());
-            var badRequestErrorMessageResult = actionResult as BadRequestErrorMessageResult;
+            var badRequestErrorMessageResult = actionResult as StatusCodeTextPlainActionResult;
             badRequestErrorMessageResult.ShouldNotBeNull();
+            badRequestErrorMessageResult.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             badRequestErrorMessageResult.Message.ShouldBe(error);
         }
 
@@ -107,13 +109,14 @@
         }
 
         [Test]
-        public void GetHttpActionResultForPut_Generic_ShouldReturnBadRequestErrorMessageResult()
+        public void GetHttpActionResultForPut_Generic_ShouldReturnBadRequestResult()
         {
             const string error = "error";
             var result = ((NonEmptyString)error).ToGeneric();
             var actionResult = WebApiControllerHelper.GetHttpActionResultForPut(result, GetController());
-            var badRequestErrorMessageResult = actionResult as BadRequestErrorMessageResult;
+            var badRequestErrorMessageResult = actionResult as StatusCodeTextPlainActionResult;
             badRequestErrorMessageResult.ShouldNotBeNull();
+            badRequestErrorMessageResult.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
             badRequestErrorMessageResult.Message.ShouldBe(error);
         }
 

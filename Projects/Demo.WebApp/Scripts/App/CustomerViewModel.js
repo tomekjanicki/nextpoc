@@ -41,8 +41,8 @@ function CustomerViewModel(baseUrl) {
                 });
                 self.customers(items);
             }),
-            function () {
-                alert("error");
+            function (data) {
+                alert(data.responseText);
             }
     }
 
@@ -51,8 +51,8 @@ function CustomerViewModel(baseUrl) {
             function() {
                 self.customers.remove(customer);
             },
-            function() {
-                alert("error");
+            function(data) {
+                alert(data.responseText);
             });
     }
 
@@ -77,8 +77,8 @@ function CustomerViewModel(baseUrl) {
                 self.listVisible(false);
                 self.insertOrUpdateVisible(true);
             },
-            function () {
-                alert("error");
+            function (data) {
+                alert(data.responseText);
             });
     }
 
@@ -95,8 +95,8 @@ function CustomerViewModel(baseUrl) {
                     self.initCustomers();
                     self.customer(null);
                 },
-                function () {
-                    alert("error");
+                function (data) {
+                    alert(data.responseText);
                 });            
         } else {
             var putData = '{ "name": "' + self.customer().name() + '", "surname": "' + self.customer().surname() + '", "phoneNumber": "' + self.customer().phoneNumber() + '", "address": "' + self.customer().address() + '", "version": "' + self.customer().version() + '" }';
@@ -109,8 +109,8 @@ function CustomerViewModel(baseUrl) {
                     self.initCustomers();
                     self.customer(null);
                 },
-                function () {
-                    alert("error");
+                function (data) {
+                    alert(data.responseText);
                 });            
         }
 
@@ -124,8 +124,8 @@ function CustomerViewModel(baseUrl) {
             contentType: "application/json; charset=UTF-8"
         }).done(function (result) {
             doneFn(result);
-        }).fail(function () {
-            failFn();
+        }).fail(function (result) {
+            failFn(result);
         });
     }
 
@@ -138,8 +138,8 @@ function CustomerViewModel(baseUrl) {
             contentType: "application/json; charset=UTF-8"
         }).done(function (result) {
             doneFn(result);
-        }).fail(function () {
-            failFn();
+        }).fail(function (result) {
+            failFn(result);
         });
     }
 }

@@ -34,7 +34,7 @@
             switch (result.Error.ErrorType)
             {
                 case ErrorType.Generic:
-                    return new BadRequestErrorMessageResult(result.Error.Message, apiController);
+                    return apiController.BadRequest(result.Error.Message);
                 case ErrorType.RowVersionMismatch:
                     return apiController.PreconditionFailed(result.Error.Message);
                 case ErrorType.NotFound:
