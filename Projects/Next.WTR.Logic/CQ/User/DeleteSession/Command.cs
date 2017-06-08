@@ -3,10 +3,10 @@
     using System;
     using System.Collections.Generic;
     using System.Collections.Immutable;
-    using Next.WTR.Common.CQ;
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.CQ;
+    using Common.Handlers.Interfaces;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class Command : BaseCommandQuery<Command>, IRequest
     {

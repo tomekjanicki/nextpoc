@@ -1,14 +1,14 @@
 ﻿namespace Next.WTR.Common.Tests.Shared.TemplateMethods.Queries
 {
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Common.Shared.TemplateMethods.Queries;
-    using Next.WTR.Common.Shared.TemplateMethods.Queries.Interfaces;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.Handlers.Interfaces;
+    using Common.Shared;
+    using Common.Shared.TemplateMethods.Queries;
+    using Common.Shared.TemplateMethods.Queries.Interfaces;
     using NSubstitute;
     using NUnit.Framework;
     using Shouldly;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public class GetCommandHandlerTemplateTests
     {

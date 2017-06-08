@@ -1,12 +1,12 @@
 ﻿namespace Next.WTR.Logic.Facades.Apis
 {
     using AutoMapper;
-    using Next.WTR.Common.Facades;
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Logic.CQ.Product.Get;
-    using Next.WTR.Types.FunctionalExtensions;
-    using Next.WTR.Web.Dtos.Apis.Product.Get;
+    using Common.Facades;
+    using Common.Handlers.Interfaces;
+    using Common.Shared;
+    using CQ.Product.Get;
+    using Types.FunctionalExtensions;
+    using Web.Dtos.Apis.Product.Get;
 
     public sealed class ProductsGetFacade
     {

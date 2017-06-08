@@ -6,8 +6,8 @@ namespace Next.WTR.Common.Database
     using System.Data;
     using System.Linq;
     using Dapper;
-    using Next.WTR.Common.ValueObjects;
-    using Next.WTR.Types;
+    using Types;
+    using ValueObjects;
 
     public static class CommandHelper
     {

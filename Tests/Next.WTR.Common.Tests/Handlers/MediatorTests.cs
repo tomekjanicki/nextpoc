@@ -1,8 +1,8 @@
 ﻿namespace Next.WTR.Common.Tests.Handlers
 {
     using System;
-    using Next.WTR.Common.Handlers;
-    using Next.WTR.Common.Handlers.Interfaces;
+    using Common.Handlers;
+    using Common.Handlers.Interfaces;
     using NSubstitute;
     using NUnit.Framework;
     using Shouldly;

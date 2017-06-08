@@ -4,7 +4,7 @@
     using System.Data;
     using System.Data.Common;
     using System.Diagnostics;
-    using Next.WTR.Types;
+    using Types;
 
     public static class DatabaseExtension
     {

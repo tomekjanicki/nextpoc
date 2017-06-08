@@ -2,9 +2,9 @@
 {
     using System;
     using Dapper;
-    using Next.WTR.Logic.Database.Interfaces;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Database.Interfaces;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class SharedQueries
     {

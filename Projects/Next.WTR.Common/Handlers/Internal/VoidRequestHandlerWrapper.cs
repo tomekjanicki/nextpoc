@@ -1,6 +1,6 @@
 ﻿namespace Next.WTR.Common.Handlers.Internal
 {
-    using Next.WTR.Common.Handlers.Interfaces;
+    using Interfaces;
 
     internal sealed class VoidRequestHandlerWrapper<TCommand> : AbstractVoidRequestHandlerWrapper
         where TCommand : IRequest

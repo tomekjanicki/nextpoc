@@ -2,9 +2,9 @@
 {
     using System.Collections.Immutable;
     using System.Linq;
-    using Next.WTR.Types;
     using NUnit.Framework;
     using Shouldly;
+    using Types;
 
     public class PartitionerTests
     {

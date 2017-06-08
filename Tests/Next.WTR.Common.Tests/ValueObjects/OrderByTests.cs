@@ -1,9 +1,9 @@
 namespace Next.WTR.Common.Tests.ValueObjects
 {
-    using Next.WTR.Common.ValueObjects;
-    using Next.WTR.Types;
+    using Common.ValueObjects;
     using NUnit.Framework;
     using Shouldly;
+    using Types;
 
     public class OrderByTests
     {

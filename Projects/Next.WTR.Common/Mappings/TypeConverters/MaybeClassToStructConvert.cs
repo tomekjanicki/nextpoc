@@ -1,7 +1,7 @@
 ﻿namespace Next.WTR.Common.Mappings.TypeConverters
 {
     using AutoMapper;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Types.FunctionalExtensions;
 
     public sealed class MaybeClassToStructConvert<TSource, TDestination> : ITypeConverter<Maybe<TSource>, TDestination?>
         where TDestination : struct

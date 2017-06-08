@@ -1,13 +1,13 @@
 ﻿namespace Next.WTR.Logic.Tests.CQ.Product.Delete
 {
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Logic.CQ.Product.Delete;
-    using Next.WTR.Logic.CQ.Product.Delete.Interfaces;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.Shared;
+    using Logic.CQ.Product.Delete;
+    using Logic.CQ.Product.Delete.Interfaces;
     using NSubstitute;
     using NUnit.Framework;
     using Shouldly;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public class CommandHandlerTests
     {

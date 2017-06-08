@@ -2,13 +2,13 @@
 {
     using System.Collections.Generic;
     using System.Collections.Immutable;
+    using Common.Database;
+    using Common.Handlers.Interfaces;
+    using Common.ValueObjects;
     using Dapper;
-    using Next.WTR.Common.Database;
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.ValueObjects;
-    using Next.WTR.Logic.Database.Interfaces;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Database.Interfaces;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class QueryHandler : IRequestHandler<Query, Paged<Product>>
     {

@@ -1,9 +1,9 @@
 namespace Next.WTR.Logic.Database
 {
     using System.Data;
-    using Next.WTR.Common.Database;
-    using Next.WTR.Logic.Database.Interfaces;
-    using Next.WTR.Types;
+    using Common.Database;
+    using Interfaces;
+    using Types;
 
     public sealed class DbConnectionProvider : IDbConnectionProvider
     {

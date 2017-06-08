@@ -1,10 +1,10 @@
 namespace Next.WTR.Common.Tests.ValueObjects
 {
-    using Next.WTR.Common.Test;
-    using Next.WTR.Common.ValueObjects;
-    using Next.WTR.Types;
+    using Common.ValueObjects;
     using NUnit.Framework;
     using Shouldly;
+    using Test;
+    using Types;
 
     public class TopSkipTests
     {

@@ -4,8 +4,8 @@ namespace Next.WTR.Common.Tests.Mappings.TypeConverters
     using System.Collections.Immutable;
     using System.Linq;
     using AutoMapper;
-    using Next.WTR.Common.Mappings;
-    using Next.WTR.Common.Mappings.TypeConverters;
+    using Common.Mappings;
+    using Common.Mappings.TypeConverters;
     using NUnit.Framework;
     using Shouldly;
 

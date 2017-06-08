@@ -1,7 +1,7 @@
 ﻿namespace Next.WTR.Web.Infrastructure
 {
     using System.Reflection;
-    using Next.WTR.Common.Tools.Interfaces;
+    using Common.Tools.Interfaces;
 
     public sealed class EntryAssemblyProvider : IEntryAssemblyProvider
     {

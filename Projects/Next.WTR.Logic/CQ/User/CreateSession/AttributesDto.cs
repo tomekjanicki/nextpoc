@@ -1,6 +1,6 @@
 ﻿namespace Next.WTR.Logic.CQ.User.CreateSession
 {
-    using Next.WTR.Types;
+    using Types;
 
     public class AttributesDto
     {

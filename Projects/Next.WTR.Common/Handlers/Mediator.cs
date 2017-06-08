@@ -1,8 +1,8 @@
 ﻿namespace Next.WTR.Common.Handlers
 {
     using System;
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Handlers.Internal;
+    using Interfaces;
+    using Internal;
 
     public sealed class Mediator : IMediator
     {

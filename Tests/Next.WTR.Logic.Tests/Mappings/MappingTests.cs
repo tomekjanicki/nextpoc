@@ -1,14 +1,14 @@
 ﻿namespace Next.WTR.Logic.Tests.Mappings
 {
     using AutoMapper;
-    using Next.WTR.Common.Mappings;
-    using Next.WTR.Logic.CQ.Product.Get;
-    using Next.WTR.Logic.CQ.Product.ValueObjects;
-    using Next.WTR.Logic.Mappings;
-    using Next.WTR.Types;
-    using Next.WTR.Web.Dtos.Apis.Product.Get;
+    using Common.Mappings;
+    using Logic.CQ.Product.Get;
+    using Logic.CQ.Product.ValueObjects;
+    using Logic.Mappings;
     using NUnit.Framework;
     using Shouldly;
+    using Types;
+    using Web.Dtos.Apis.Product.Get;
 
     public class MappingTests
     {

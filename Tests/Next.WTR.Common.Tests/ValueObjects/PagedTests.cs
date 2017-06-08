@@ -2,10 +2,10 @@ namespace Next.WTR.Common.Tests.ValueObjects
 {
     using System.Collections.Generic;
     using System.Collections.Immutable;
-    using Next.WTR.Common.Test;
-    using Next.WTR.Common.ValueObjects;
+    using Common.ValueObjects;
     using NUnit.Framework;
     using Shouldly;
+    using Test;
 
     public class PagedTests
     {

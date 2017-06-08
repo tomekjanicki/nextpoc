@@ -2,8 +2,8 @@
 {
     using System.Security.Claims;
     using System.Web.Http;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Shared;
+    using Types.FunctionalExtensions;
 
     public abstract class BaseWebApiController : ApiController
     {

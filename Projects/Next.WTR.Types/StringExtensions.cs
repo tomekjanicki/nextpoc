@@ -1,7 +1,7 @@
 ﻿namespace Next.WTR.Types
 {
     using System;
-    using Next.WTR.Types.FunctionalExtensions;
+    using FunctionalExtensions;
     using NullGuard;
 
     public static class StringExtensions

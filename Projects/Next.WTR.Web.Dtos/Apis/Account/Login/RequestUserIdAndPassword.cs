@@ -1,6 +1,6 @@
 ﻿namespace Next.WTR.Web.Dtos.Apis.Account.Login
 {
-    using Next.WTR.Common.Dtos;
+    using Common.Dtos;
 
     public class RequestUserIdAndPassword
     {

@@ -1,6 +1,6 @@
 ﻿namespace Next.WTR.Web.Infrastructure
 {
-    using Next.WTR.Common.IoC.Interfaces;
+    using Common.IoC.Interfaces;
     using SimpleInjector;
 
     public sealed class IoCContainer : IIoCContainer

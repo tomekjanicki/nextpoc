@@ -4,13 +4,13 @@
     using System.Net.Http;
     using System.Web.Http;
     using System.Web.Http.Results;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Common.Web.Infrastructure;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
     using NSubstitute;
     using NUnit.Framework;
+    using Shared;
     using Shouldly;
+    using Types;
+    using Types.FunctionalExtensions;
+    using Web.Infrastructure;
 
     public class WebApiControllerHelperTests
     {

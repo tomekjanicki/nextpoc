@@ -1,9 +1,9 @@
 ﻿namespace Next.WTR.Types.Tests.FunctionalExtensions
 {
     using System;
-    using Next.WTR.Types.FunctionalExtensions;
     using NUnit.Framework;
     using Shouldly;
+    using Types.FunctionalExtensions;
 
     public class MaybeTests
     {

@@ -2,7 +2,7 @@
 {
     using System;
     using System.Reflection;
-    using Next.WTR.Common.Tools.Interfaces;
+    using Interfaces;
 
     public sealed class AssemblyVersionProvider : IAssemblyVersionProvider
     {

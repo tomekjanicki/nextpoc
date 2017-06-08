@@ -1,10 +1,10 @@
 ﻿namespace Next.WTR.Logic.CQ.Product.Insert
 {
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Logic.CQ.Product.Insert.Interfaces;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.Handlers.Interfaces;
+    using Common.Shared;
+    using Interfaces;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class CommandHandler : IRequestHandler<Command, IResult<PositiveInt, Error>>
     {

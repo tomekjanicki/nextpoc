@@ -3,9 +3,9 @@
     using System;
     using System.Runtime.Caching;
     using System.Threading.Tasks;
-    using Next.WTR.Common.Cache.Interfaces;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Interfaces;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class CacheProvider : ICacheProvider
     {

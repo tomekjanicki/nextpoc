@@ -1,6 +1,6 @@
 namespace Next.WTR.Common.Shared.TemplateMethods.Commands.Interfaces
 {
-    using Next.WTR.Common.ValueObjects;
+    using ValueObjects;
 
     public interface IIdVersion
     {

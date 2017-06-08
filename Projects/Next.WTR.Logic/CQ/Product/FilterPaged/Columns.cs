@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Collections.Immutable;
-    using Next.WTR.Types;
+    using Types;
 
     public static class Columns
     {

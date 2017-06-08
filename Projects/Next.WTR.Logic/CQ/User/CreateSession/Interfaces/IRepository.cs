@@ -1,8 +1,8 @@
 ﻿namespace Next.WTR.Logic.CQ.User.CreateSession.Interfaces
 {
     using System;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public interface IRepository
     {

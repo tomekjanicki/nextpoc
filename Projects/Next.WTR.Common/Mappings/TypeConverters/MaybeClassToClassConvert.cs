@@ -1,8 +1,8 @@
 ﻿namespace Next.WTR.Common.Mappings.TypeConverters
 {
     using AutoMapper;
-    using Next.WTR.Types.FunctionalExtensions;
     using NullGuard;
+    using Types.FunctionalExtensions;
 
     public sealed class MaybeClassToClassConvert<TSource, TDestination> : ITypeConverter<Maybe<TSource>, TDestination>
         where TDestination : class

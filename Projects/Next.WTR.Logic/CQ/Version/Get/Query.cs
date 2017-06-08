@@ -4,9 +4,9 @@
     using System.Collections.Generic;
     using System.Collections.Immutable;
     using System.Reflection;
-    using Next.WTR.Common.CQ;
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Types;
+    using Common.CQ;
+    using Common.Handlers.Interfaces;
+    using Types;
 
     public sealed class Query : BaseCommandQuery<Query>, IRequest<NonEmptyString>
     {

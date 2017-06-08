@@ -2,10 +2,10 @@
 {
     using System;
     using System.Collections;
-    using Next.WTR.Common.Test;
-    using Next.WTR.Common.ValueObjects;
+    using Common.ValueObjects;
     using NUnit.Framework;
     using Shouldly;
+    using Test;
 
     public class DateTimePeriodTests
     {

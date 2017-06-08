@@ -1,10 +1,10 @@
 ﻿namespace Next.WTR.Logic.Facades.Apis
 {
-    using Next.WTR.Common.Facades;
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Logic.CQ.Product.Delete;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.Facades;
+    using Common.Handlers.Interfaces;
+    using Common.Shared;
+    using CQ.Product.Delete;
+    using Types.FunctionalExtensions;
 
     public sealed class ProductsDeleteFacade
     {

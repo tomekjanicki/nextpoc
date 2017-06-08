@@ -1,7 +1,7 @@
 ﻿namespace Next.WTR.Logic.CQ.Product.Insert.Interfaces
 {
-    using Next.WTR.Logic.CQ.Product.ValueObjects;
-    using Next.WTR.Types;
+    using Types;
+    using ValueObjects;
 
     public interface IRepository
     {

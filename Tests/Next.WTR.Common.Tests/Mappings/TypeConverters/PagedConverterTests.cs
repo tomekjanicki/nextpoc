@@ -4,12 +4,12 @@
     using System.Collections.Immutable;
     using System.Linq;
     using AutoMapper;
-    using Next.WTR.Common.Dtos;
-    using Next.WTR.Common.Mappings;
-    using Next.WTR.Common.Mappings.TypeConverters;
-    using Next.WTR.Types;
+    using Common.Mappings;
+    using Common.Mappings.TypeConverters;
+    using Dtos;
     using NUnit.Framework;
     using Shouldly;
+    using Types;
 
     public class PagedConverterTests
     {

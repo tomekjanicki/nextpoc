@@ -1,8 +1,8 @@
 ﻿namespace Next.WTR.Common.ValueObjects
 {
     using System.Collections.Immutable;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class TopSkip : ValueObject<TopSkip>
     {

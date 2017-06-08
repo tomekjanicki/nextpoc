@@ -5,14 +5,14 @@
     using System.Runtime.Caching;
     using System.Threading;
     using System.Threading.Tasks;
-    using Next.WTR.Common.Cache;
-    using Next.WTR.Common.Cache.Interfaces;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.Cache;
+    using Common.Cache.Interfaces;
     using NSubstitute;
     using NSubstitute.ExceptionExtensions;
     using NUnit.Framework;
     using Shouldly;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public class CacheProviderTests
     {

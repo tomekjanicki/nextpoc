@@ -2,12 +2,12 @@
 {
     using System;
     using System.Collections.Immutable;
-    using Next.WTR.Common.CQ;
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Common.ValueObjects;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.CQ;
+    using Common.Handlers.Interfaces;
+    using Common.Shared;
+    using Common.ValueObjects;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class Query : BaseCommandQuery<Query>, IRequest<Paged<Product>>
     {

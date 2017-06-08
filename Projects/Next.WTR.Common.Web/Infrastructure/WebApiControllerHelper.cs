@@ -4,8 +4,8 @@
     using System.Net;
     using System.Web.Http;
     using System.Web.Http.Results;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Shared;
+    using Types.FunctionalExtensions;
 
     public static class WebApiControllerHelper
     {

@@ -1,9 +1,9 @@
 ﻿namespace Next.WTR.Common.Shared.TemplateMethods.Commands
 {
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Shared.TemplateMethods.Commands.Interfaces;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Handlers.Interfaces;
+    using Interfaces;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public abstract class UpdateCommandHandlerTemplate<TCommand, TUpdateRepository> : IRequestHandler<TCommand, IResult<Error>>
         where TCommand : IIdVersion, IRequest<IResult<Error>>

@@ -2,8 +2,8 @@
 {
     using System.Collections.Immutable;
     using System.Linq;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class Paged<T> : ValueObject<Paged<T>>
     {

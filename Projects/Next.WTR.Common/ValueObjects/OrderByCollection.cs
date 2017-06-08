@@ -2,8 +2,8 @@ namespace Next.WTR.Common.ValueObjects
 {
     using System.Collections.Immutable;
     using System.Linq;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class OrderByCollection : ValueObject<OrderByCollection>
     {

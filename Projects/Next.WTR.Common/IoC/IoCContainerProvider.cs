@@ -1,7 +1,7 @@
 ﻿namespace Next.WTR.Common.IoC
 {
     using System;
-    using Next.WTR.Common.IoC.Interfaces;
+    using Interfaces;
 
     public static class IoCContainerProvider
     {

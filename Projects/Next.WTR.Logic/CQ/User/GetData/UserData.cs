@@ -1,7 +1,7 @@
 ﻿namespace Next.WTR.Logic.CQ.User.GetData
 {
     using System.Collections.Immutable;
-    using Next.WTR.Types;
+    using Types;
 
     public class UserData
     {

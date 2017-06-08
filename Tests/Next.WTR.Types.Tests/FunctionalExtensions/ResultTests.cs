@@ -2,9 +2,9 @@
 {
     using System;
     using System.Collections;
-    using Next.WTR.Types.FunctionalExtensions;
     using NUnit.Framework;
     using Shouldly;
+    using Types.FunctionalExtensions;
 
     public class ResultTests
     {

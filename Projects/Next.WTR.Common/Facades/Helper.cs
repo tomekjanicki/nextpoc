@@ -2,10 +2,10 @@
 {
     using System;
     using AutoMapper;
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Handlers.Interfaces;
+    using Shared;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public static class Helper
     {

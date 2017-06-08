@@ -3,10 +3,10 @@
     using System.Collections;
     using System.Collections.Generic;
     using System.Collections.Immutable;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Types;
+    using Common.Shared;
     using NUnit.Framework;
     using Shouldly;
+    using Types;
 
     public class OrderByParserTests
     {

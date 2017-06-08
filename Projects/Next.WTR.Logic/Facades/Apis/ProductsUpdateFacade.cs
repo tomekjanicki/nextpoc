@@ -1,11 +1,11 @@
 namespace Next.WTR.Logic.Facades.Apis
 {
-    using Next.WTR.Common.Facades;
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Logic.CQ.Product.Update;
-    using Next.WTR.Types.FunctionalExtensions;
-    using Next.WTR.Web.Dtos.Apis.Product.Update;
+    using Common.Facades;
+    using Common.Handlers.Interfaces;
+    using Common.Shared;
+    using CQ.Product.Update;
+    using Types.FunctionalExtensions;
+    using Web.Dtos.Apis.Product.Update;
 
     public sealed class ProductsUpdateFacade
     {

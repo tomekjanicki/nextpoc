@@ -1,9 +1,9 @@
 ﻿namespace Next.WTR.Web.Apis
 {
     using System.Web.Http;
-    using Next.WTR.Common.Web.Infrastructure;
-    using Next.WTR.Logic.Facades.Apis;
-    using Next.WTR.Types;
+    using Common.Web.Infrastructure;
+    using Logic.Facades.Apis;
+    using Types;
 
     public sealed class ProductsController : BaseWebApiController
     {

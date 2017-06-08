@@ -1,10 +1,10 @@
 ﻿namespace Next.WTR.Logic.CQ.Product.Update
 {
+    using Common.Shared.TemplateMethods.Commands.Interfaces;
     using Dapper;
-    using Next.WTR.Common.Shared.TemplateMethods.Commands.Interfaces;
-    using Next.WTR.Logic.Database.Interfaces;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Database.Interfaces;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class Repository : IUpdateRepository<Command>
     {

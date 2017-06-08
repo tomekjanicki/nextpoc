@@ -2,8 +2,8 @@
 {
     using System;
     using System.Web;
+    using Common.Log4Net;
     using log4net;
-    using Next.WTR.Common.Log4Net;
 
     public sealed class GlobalHttpModule : IHttpModule
     {

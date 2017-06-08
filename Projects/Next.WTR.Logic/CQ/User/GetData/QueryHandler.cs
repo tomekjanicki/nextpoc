@@ -1,9 +1,9 @@
 ﻿namespace Next.WTR.Logic.CQ.User.GetData
 {
     using System;
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Logic.CQ.User.GetData.Interfaces;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.Handlers.Interfaces;
+    using Interfaces;
+    using Types.FunctionalExtensions;
 
     public sealed class QueryHandler : IRequestHandler<Query, Maybe<UserData>>
     {

@@ -1,7 +1,7 @@
 ﻿namespace Next.WTR.Logic.CQ.Product.ValueObjects
 {
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class Code : SimpleClassValueObject<Code, string>
     {

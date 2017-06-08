@@ -1,7 +1,7 @@
 ﻿namespace Next.WTR.Logic.CQ.Product.Get
 {
-    using Next.WTR.Common.Shared.TemplateMethods.Queries;
-    using Next.WTR.Common.Shared.TemplateMethods.Queries.Interfaces;
+    using Common.Shared.TemplateMethods.Queries;
+    using Common.Shared.TemplateMethods.Queries.Interfaces;
 
     public sealed class QueryHandler : GetCommandHandlerTemplate<Query, IGetRepository<Product>, Product>
     {

@@ -1,8 +1,8 @@
 ﻿namespace Next.WTR.Logic.CQ.User.DeleteSession
 {
+    using Common.Handlers.Interfaces;
     using Dapper;
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Logic.Database.Interfaces;
+    using Database.Interfaces;
 
     public sealed class CommandHandler : IVoidRequestHandler<Command>
     {

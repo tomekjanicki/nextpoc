@@ -1,13 +1,13 @@
 ﻿namespace Next.WTR.Logic.Facades.Apis
 {
     using AutoMapper;
-    using Next.WTR.Common.Facades;
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Common.Tools.Interfaces;
-    using Next.WTR.Logic.CQ.Version.Get;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.Facades;
+    using Common.Handlers.Interfaces;
+    using Common.Shared;
+    using Common.Tools.Interfaces;
+    using CQ.Version.Get;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class VersionGetFacade
     {

@@ -1,9 +1,9 @@
 ﻿namespace Next.WTR.Logic.CQ.Product.Get
 {
     using System;
-    using Next.WTR.Logic.CQ.Product.ValueObjects;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Types;
+    using Types.FunctionalExtensions;
+    using ValueObjects;
 
     public class Product
     {

@@ -3,9 +3,9 @@
     using System.Collections.Generic;
     using System.Collections.Immutable;
     using AutoMapper;
-    using Next.WTR.Common.Dtos;
-    using Next.WTR.Common.Mappings.TypeConverters;
-    using Next.WTR.Web.Dtos.Apis.Product.FilterPaged;
+    using Common.Dtos;
+    using Common.Mappings.TypeConverters;
+    using Web.Dtos.Apis.Product.FilterPaged;
 
     public static class AutoMapperConfiguration
     {

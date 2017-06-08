@@ -1,8 +1,8 @@
 ﻿namespace Next.WTR.Logic.Tests.CQ.Product.Delete
 {
     using System;
-    using Next.WTR.Common.Test;
-    using Next.WTR.Logic.CQ.Product.Delete;
+    using Common.Test;
+    using Logic.CQ.Product.Delete;
     using NUnit.Framework;
     using Shouldly;
 

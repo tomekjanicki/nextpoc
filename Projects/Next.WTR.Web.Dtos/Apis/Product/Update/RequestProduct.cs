@@ -1,6 +1,6 @@
 ﻿namespace Next.WTR.Web.Dtos.Apis.Product.Update
 {
-    using Next.WTR.Common.Dtos;
+    using Common.Dtos;
 
     public class RequestProduct
     {

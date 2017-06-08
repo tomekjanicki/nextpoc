@@ -4,10 +4,10 @@
     using System.Collections.Immutable;
     using System.Linq;
     using Dapper;
-    using Next.WTR.Logic.CQ.User.GetData.Interfaces;
-    using Next.WTR.Logic.Database.Interfaces;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Database.Interfaces;
+    using Interfaces;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class Repository : IRepository
     {

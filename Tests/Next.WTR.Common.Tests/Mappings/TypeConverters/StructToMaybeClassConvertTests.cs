@@ -1,12 +1,12 @@
 namespace Next.WTR.Common.Tests.Mappings.TypeConverters
 {
     using AutoMapper;
-    using Next.WTR.Common.Mappings;
-    using Next.WTR.Common.Mappings.TypeConverters;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.Mappings;
+    using Common.Mappings.TypeConverters;
     using NUnit.Framework;
     using Shouldly;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public class StructToMaybeClassConvertTests
     {

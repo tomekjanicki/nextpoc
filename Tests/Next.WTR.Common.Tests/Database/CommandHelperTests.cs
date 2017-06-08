@@ -2,13 +2,13 @@
 {
     using System.Collections.Generic;
     using System.Collections.Immutable;
+    using Common.Database;
+    using Common.ValueObjects;
     using Dapper;
-    using Next.WTR.Common.Database;
-    using Next.WTR.Common.ValueObjects;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
     using NUnit.Framework;
     using Shouldly;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public class CommandHelperTests
     {

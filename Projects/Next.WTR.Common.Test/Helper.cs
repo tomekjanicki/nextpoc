@@ -1,8 +1,8 @@
 ﻿namespace Next.WTR.Common.Test
 {
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
     using Shouldly;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public static class Helper
     {

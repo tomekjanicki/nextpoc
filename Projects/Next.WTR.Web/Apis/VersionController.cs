@@ -1,8 +1,8 @@
 ﻿namespace Next.WTR.Web.Apis
 {
     using System.Web.Http;
-    using Next.WTR.Common.Web.Infrastructure;
-    using Next.WTR.Logic.Facades.Apis;
+    using Common.Web.Infrastructure;
+    using Logic.Facades.Apis;
 
     public sealed class VersionController : BaseWebApiController
     {

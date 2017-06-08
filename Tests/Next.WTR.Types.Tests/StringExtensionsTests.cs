@@ -1,8 +1,8 @@
 ﻿namespace Next.WTR.Types.Tests
 {
-    using Next.WTR.Types.FunctionalExtensions;
     using NUnit.Framework;
     using Shouldly;
+    using Types.FunctionalExtensions;
 
     public class StringExtensionsTests
     {

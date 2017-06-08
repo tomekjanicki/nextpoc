@@ -1,8 +1,8 @@
 ﻿namespace Next.WTR.Common.Shared
 {
     using System;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public static class ErrorResultExtensions
     {

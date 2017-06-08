@@ -1,6 +1,6 @@
 ﻿namespace Next.WTR.Web.Dtos.Apis.Product.Insert
 {
-    using Next.WTR.Common.Dtos;
+    using Common.Dtos;
 
     public class RequestProduct
     {

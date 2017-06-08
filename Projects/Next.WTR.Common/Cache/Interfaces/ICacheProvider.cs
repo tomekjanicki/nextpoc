@@ -2,8 +2,8 @@
 {
     using System;
     using System.Threading.Tasks;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public interface ICacheProvider
     {

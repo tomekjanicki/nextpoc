@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Collections.Specialized;
     using System.Linq;
-    using Next.WTR.Types.FunctionalExtensions;
+    using FunctionalExtensions;
 
     public static class TypeExtensions
     {

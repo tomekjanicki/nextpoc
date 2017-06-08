@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Collections.Immutable;
     using System.Linq;
-    using Next.WTR.Types;
+    using Types;
 
     public static class Partitioner
     {

@@ -1,15 +1,15 @@
 ﻿namespace Next.WTR.Common.Tests.Shared.TemplateMethods.Commands
 {
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Common.Shared.TemplateMethods.Commands;
-    using Next.WTR.Common.Shared.TemplateMethods.Commands.Interfaces;
-    using Next.WTR.Common.ValueObjects;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.Handlers.Interfaces;
+    using Common.Shared;
+    using Common.Shared.TemplateMethods.Commands;
+    using Common.Shared.TemplateMethods.Commands.Interfaces;
+    using Common.ValueObjects;
     using NSubstitute;
     using NUnit.Framework;
     using Shouldly;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public class UpdateCommandHandlerTemplateTests
     {

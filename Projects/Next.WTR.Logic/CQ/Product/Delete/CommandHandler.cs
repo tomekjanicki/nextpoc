@@ -1,9 +1,9 @@
 ﻿namespace Next.WTR.Logic.CQ.Product.Delete
 {
-    using Next.WTR.Common.Shared.TemplateMethods.Commands;
-    using Next.WTR.Logic.CQ.Product.Delete.Interfaces;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.Shared.TemplateMethods.Commands;
+    using Interfaces;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class CommandHandler : DeleteCommandHandlerTemplate<Command, IRepository>
     {

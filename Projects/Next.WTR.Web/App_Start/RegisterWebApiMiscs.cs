@@ -4,9 +4,9 @@
     using System.Net.Http.Formatting;
     using System.Web.Http;
     using System.Web.Http.ExceptionHandling;
+    using Infrastructure;
     using Newtonsoft.Json.Converters;
     using Newtonsoft.Json.Serialization;
-    using Next.WTR.Web.Infrastructure;
 
     public static class RegisterWebApiMiscs
     {

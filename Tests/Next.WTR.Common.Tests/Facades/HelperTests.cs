@@ -1,14 +1,14 @@
 ﻿namespace Next.WTR.Common.Tests.Facades
 {
     using AutoMapper;
-    using Next.WTR.Common.Facades;
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Shared;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.Facades;
+    using Common.Handlers.Interfaces;
+    using Common.Shared;
     using NSubstitute;
     using NUnit.Framework;
     using Shouldly;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public class HelperTests
     {

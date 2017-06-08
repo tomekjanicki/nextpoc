@@ -1,8 +1,8 @@
 ﻿namespace Next.WTR.Logic.CQ.Version.Get
 {
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Tools.Interfaces;
-    using Next.WTR.Types;
+    using Common.Handlers.Interfaces;
+    using Common.Tools.Interfaces;
+    using Types;
 
     public sealed class QueryHandler : IRequestHandler<Query, NonEmptyString>
     {

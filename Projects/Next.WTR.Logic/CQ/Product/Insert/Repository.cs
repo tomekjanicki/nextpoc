@@ -1,10 +1,10 @@
 ﻿namespace Next.WTR.Logic.CQ.Product.Insert
 {
     using Dapper;
-    using Next.WTR.Logic.CQ.Product.Insert.Interfaces;
-    using Next.WTR.Logic.CQ.Product.ValueObjects;
-    using Next.WTR.Logic.Database.Interfaces;
-    using Next.WTR.Types;
+    using Database.Interfaces;
+    using Interfaces;
+    using Types;
+    using ValueObjects;
 
     public sealed class Repository : IRepository
     {

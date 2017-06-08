@@ -1,9 +1,9 @@
 ﻿namespace Next.WTR.Common.Shared.TemplateMethods.Queries
 {
-    using Next.WTR.Common.Handlers.Interfaces;
-    using Next.WTR.Common.Shared.TemplateMethods.Queries.Interfaces;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Handlers.Interfaces;
+    using Interfaces;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public class GetCommandHandlerTemplate<TQuery, TGetRepository, TItem> : IRequestHandler<TQuery, IResult<TItem, Error>>
         where TQuery : IId, IRequest<IResult<TItem, Error>>

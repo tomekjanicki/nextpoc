@@ -2,10 +2,10 @@ namespace Next.WTR.Types.Tests
 {
     using System;
     using System.Collections;
-    using Next.WTR.Common.Test;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.Test;
     using NUnit.Framework;
     using Shouldly;
+    using Types.FunctionalExtensions;
 
     public class NonEmptyLowerCaseStringTests
     {

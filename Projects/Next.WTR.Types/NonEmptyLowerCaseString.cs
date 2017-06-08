@@ -1,6 +1,6 @@
 ﻿namespace Next.WTR.Types
 {
-    using Next.WTR.Types.FunctionalExtensions;
+    using FunctionalExtensions;
 
     public sealed class NonEmptyLowerCaseString : SimpleClassValueObject<NonEmptyLowerCaseString, string>
     {

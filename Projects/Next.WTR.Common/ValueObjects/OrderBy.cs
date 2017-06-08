@@ -2,8 +2,8 @@
 {
     using System.Collections.Generic;
     using System.Collections.Immutable;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public sealed class OrderBy : ValueObject<OrderBy>
     {

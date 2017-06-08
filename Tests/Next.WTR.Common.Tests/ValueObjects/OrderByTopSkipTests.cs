@@ -2,12 +2,12 @@ namespace Next.WTR.Common.Tests.ValueObjects
 {
     using System.Collections.Generic;
     using System.Collections.Immutable;
-    using Next.WTR.Common.Test;
-    using Next.WTR.Common.ValueObjects;
-    using Next.WTR.Types;
-    using Next.WTR.Types.FunctionalExtensions;
+    using Common.ValueObjects;
     using NUnit.Framework;
     using Shouldly;
+    using Test;
+    using Types;
+    using Types.FunctionalExtensions;
 
     public class OrderByTopSkipTests
     {
