@@ -1,3 +1,3 @@
 ﻿using System.Reflection;
-[assembly: AssemblyTitle("Next.WTR.Common.Tests")]
-[assembly: AssemblyProduct("Next.WTR.Common.Tests")]
+[assembly: AssemblyTitle("Demo.Common.Tests")]
+[assembly: AssemblyProduct("Demo.Common.Tests")]

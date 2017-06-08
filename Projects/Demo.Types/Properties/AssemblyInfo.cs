@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
 using NullGuard;
 [assembly: NullGuard(ValidationFlags.All)]
-[assembly: AssemblyTitle("Next.WTR.Types")]
-[assembly: AssemblyProduct("Next.WTR.Types")]
+[assembly: AssemblyTitle("Demo.Types")]
+[assembly: AssemblyProduct("Demo.Types")]
