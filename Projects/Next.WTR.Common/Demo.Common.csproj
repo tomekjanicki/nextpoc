@@ -7,8 +7,8 @@
     <ProjectGuid>{B97EFB86-FB8B-43B7-9892-D4E2AF7257B6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Next.WTR.Common</RootNamespace>
-    <AssemblyName>Next.WTR.Common</AssemblyName>
+    <RootNamespace>Demo.Common</RootNamespace>
+    <AssemblyName>Demo.Common</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>

@@ -7,8 +7,8 @@
     <ProjectGuid>{9033BA8A-C531-4DCD-A342-A4B57DDD11D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Next.WTR.Types</RootNamespace>
-    <AssemblyName>Next.WTR.Types</AssemblyName>
+    <RootNamespace>Demo.Types</RootNamespace>
+    <AssemblyName>Demo.Types</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>

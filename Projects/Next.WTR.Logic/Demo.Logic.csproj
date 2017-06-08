@@ -7,8 +7,8 @@
     <ProjectGuid>{AC510806-42A1-4B3F-8A6C-97B96398D475}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Next.WTR.Logic</RootNamespace>
-    <AssemblyName>Next.WTR.Logic</AssemblyName>
+    <RootNamespace>Demo.Logic</RootNamespace>
+    <AssemblyName>Demo.Logic</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>

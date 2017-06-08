@@ -7,8 +7,8 @@
     <ProjectGuid>{F34C0E7A-3420-47F1-9F92-A24EA76E5E5A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Next.WTR.Common.Web.Tests</RootNamespace>
-    <AssemblyName>Next.WTR.Common.Web.Tests</AssemblyName>
+    <RootNamespace>Demo.Common.Web.Tests</RootNamespace>
+    <AssemblyName>Demo.Common.Web.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

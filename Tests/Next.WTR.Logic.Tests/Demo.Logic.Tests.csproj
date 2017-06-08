@@ -7,8 +7,8 @@
     <ProjectGuid>{1606C136-76FC-44E7-A36C-DD7BDC4C33A2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Next.WTR.Logic.Tests</RootNamespace>
-    <AssemblyName>Next.WTR.Logic.Tests</AssemblyName>
+    <RootNamespace>Demo.Logic.Tests</RootNamespace>
+    <AssemblyName>Demo.Logic.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>

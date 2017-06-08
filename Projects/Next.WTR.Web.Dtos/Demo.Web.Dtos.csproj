@@ -7,8 +7,8 @@
     <ProjectGuid>{D383FC01-3AB8-4106-98EA-543607ACE0E9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Next.WTR.Web.Dtos</RootNamespace>
-    <AssemblyName>Next.WTR.Web.Dtos</AssemblyName>
+    <RootNamespace>Demo.Web.Dtos</RootNamespace>
+    <AssemblyName>Demo.Web.Dtos</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
