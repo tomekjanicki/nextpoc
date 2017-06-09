@@ -35,6 +35,8 @@ function CustomerViewModel(baseUrl) {
 
     self.customer = window.ko.observable(null);
 
+    self.modalText = window.ko.observable("");
+
     self.initCustomers = function () {
         ajax("GET", "customers/?top=1000&skip=0", null,
             function (data) {
@@ -122,7 +124,10 @@ function CustomerViewModel(baseUrl) {
 
 
     function handleError(data) {
-        alert(data.responseText);
+        self.modalText(data.responseText);
+        $("#dialog").modal({
+            backdrop: "static"
+        });
     }
 
     function validateCustomer() {
