@@ -6,7 +6,7 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    <div data-bind="visible: listVisible">
+    <div data-bind="visible: !editVisible()">
         <input type="button" class="btn btn-info" value="Add" data-bind="click: addCustomer" />
         <table class="table table-bordered">
             <thead>
@@ -31,9 +31,9 @@
             </tbody>
         </table>
     </div>
-    <div data-bind="visible: insertOrUpdateVisible" style="display: none">
+    <div data-bind="visible: editVisible, if: editVisible" style="display: none">
         <input type="button" class="btn btn-info" value="Back To List" data-bind="click: backToList">
-        <table class="table table-bordered" data-bind="if: insertOrUpdateVisible">
+        <table class="table table-bordered">
             <tr>
                 <td>Name</td>
                 <td><input type="text" data-bind="value: customer().name" /></td>

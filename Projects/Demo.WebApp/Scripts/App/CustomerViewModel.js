@@ -24,15 +24,14 @@ function CustomerViewModel(baseUrl) {
 
     self.baseUrl = baseUrl;
 
-    self.listVisible = window.ko.observable(true);
-    self.insertOrUpdateVisible = window.ko.observable(false);
+    self.editVisible = window.ko.observable(false);
 
     self.customers = window.ko.observableArray([]);
 
     self.customer = window.ko.observable(null);
 
     self.initCustomers = function () {
-        ajaxGetOrDelete("GET", "customers/?top=1000&skip=0",
+        ajax("GET", "customers/?top=1000&skip=0", null,
             function (data) {
                 var itemList = data.items;
                 var items = [];
@@ -46,36 +45,33 @@ function CustomerViewModel(baseUrl) {
             }
     }
 
-    self.deleteCustomer = function(customer) {
-        ajaxGetOrDelete("DELETE", "customers/" + customer.id + "?version=" + customer.version,
-            function() {
+    self.deleteCustomer = function (customer) {
+        ajax("DELETE", "customers/" + customer.id + "?version=" + customer.version, null,
+            function () {
                 self.customers.remove(customer);
             },
-            function(data) {
+            function (data) {
                 alert(data.responseText);
             });
     }
 
-    self.backToList = function() {
-        self.listVisible(true);
-        self.insertOrUpdateVisible(false);
+    self.backToList = function () {
+        self.editVisible(false);
         self.customer(null);
     }
 
-    self.addCustomer = function() {
+    self.addCustomer = function () {
         var observableCustomer = new ObservableCustomer(0, "", "", "", "", "");
         self.customer(observableCustomer);
-        self.listVisible(false);
-        self.insertOrUpdateVisible(true);        
+        self.editVisible(true);
     }
 
-    self.editCustomer = function(customer) {
-        ajaxGetOrDelete("GET", "customers/" + customer.id,
+    self.editCustomer = function (customer) {
+        ajax("GET", "customers/" + customer.id, null,
             function (data) {
                 var observableCustomer = new ObservableCustomer(data.id, data.name, data.surname, data.phoneNumber, data.address, data.version);
                 self.customer(observableCustomer);
-                self.listVisible(false);
-                self.insertOrUpdateVisible(true);
+                self.editVisible(true);
             },
             function (data) {
                 alert(data.responseText);
@@ -84,52 +80,32 @@ function CustomerViewModel(baseUrl) {
 
     self.insertOrUpdateCustomer = function () {
         var version = self.customer().version();
+        var postOrPutData;
+        var method;
+        var url;
         if (version === "") {
-            var postData = '{ "name": "' + self.customer().name() + '", "surname": "' + self.customer().surname() + '", "phoneNumber": "' + self.customer().phoneNumber() + '", "address": "' + self.customer().address() + '" }';
-            ajaxPostOrPut("POST",
-                "customers/",
-                postData,
-                function () {
-                    self.listVisible(true);
-                    self.insertOrUpdateVisible(false);
-                    self.initCustomers();
-                    self.customer(null);
-                },
-                function (data) {
-                    alert(data.responseText);
-                });            
+            method = "POST";
+            postOrPutData = '{ "name": "' + self.customer().name() + '", "surname": "' + self.customer().surname() + '", "phoneNumber": "' + self.customer().phoneNumber() + '", "address": "' + self.customer().address() + '" }';
+            url = "customers/";
         } else {
-            var putData = '{ "name": "' + self.customer().name() + '", "surname": "' + self.customer().surname() + '", "phoneNumber": "' + self.customer().phoneNumber() + '", "address": "' + self.customer().address() + '", "version": "' + self.customer().version() + '" }';
-            ajaxPostOrPut("PUT",
-                "customers/" + self.customer().id(),
-                putData,
-                function () {
-                    self.listVisible(true);
-                    self.insertOrUpdateVisible(false);
-                    self.initCustomers();
-                    self.customer(null);
-                },
-                function (data) {
-                    alert(data.responseText);
-                });            
+            method = "PUT";
+            postOrPutData = '{ "name": "' + self.customer().name() + '", "surname": "' + self.customer().surname() + '", "phoneNumber": "' + self.customer().phoneNumber() + '", "address": "' + self.customer().address() + '", "version": "' + self.customer().version() + '" }';
+            url = "customers/" + self.customer().id();
         }
-
+        ajax(method,
+            url,
+            postOrPutData,
+            function () {
+                self.editVisible(false);
+                self.initCustomers();
+                self.customer(null);
+            },
+            function (data) {
+                alert(data.responseText);
+            });
     }
 
-    function ajaxGetOrDelete(method, endpoint, doneFn, failFn) {
-        $.ajax({
-            method: method,
-            url: self.baseUrl + endpoint,
-            cache: false,
-            contentType: "application/json; charset=UTF-8"
-        }).done(function (result) {
-            doneFn(result);
-        }).fail(function (result) {
-            failFn(result);
-        });
-    }
-
-    function ajaxPostOrPut(method, endpoint, data, doneFn, failFn) {
+    function ajax(method, endpoint, data, doneFn, failFn) {
         $.ajax({
             method: method,
             cache: false,
