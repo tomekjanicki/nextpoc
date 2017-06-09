@@ -114,20 +114,29 @@ function CustomerViewModel(baseUrl) {
     }
 
     function validateCustomer() {
-        var valid = true;
         var customer = self.customer(); 
-        if (customer.name() !== "") {
-            if (customer.name().length >= 50) {
-                customer.nameValidationText("");
+        var valid = 
+            validateField("Name", 50, false, customer.name, customer.nameValidationText) &
+            validateField("Surname", 50, false, customer.surname, customer.surnameValidationText) &
+            validateField("Phone number", 50, false, customer.phoneNumber, customer.phoneNumberValidationText) &
+            validateField("Address", 100, true, customer.address, customer.addressValidationText);
+        return valid;
+    }
+
+    function validateField(fieldName, maxLength, optional, field, validationField) {
+        var valid = true;
+        if (field() !== "" || optional) {
+            if (field().length <= maxLength) {
+                validationField("");
             } else {
-                customer.nameValidationText("Name cannot be longer than 50 chars");
+                validationField(fieldName + " cannot be longer than " + maxLength + " chars");
                 valid = false;
             }
         } else {
-            customer.nameValidationText("Name is required");
+            validationField(fieldName + " is required");
             valid = false;
         }
-        return valid;
+        return valid;        
     }
 
     function ajax(method, endpoint, data, doneFn, failFn) {
