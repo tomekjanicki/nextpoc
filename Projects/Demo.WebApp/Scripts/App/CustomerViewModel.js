@@ -20,6 +20,7 @@ function ObservableCustomer(id, name, surname, phoneNumber, address, version) {
     self.surnameValidationText = window.ko.observable("");
     self.phoneNumberValidationText = window.ko.observable("");
     self.addressValidationText = window.ko.observable("");
+    self.title = version === "" ? "Add new customer" : "Edit customer";
 }
 
 
@@ -45,7 +46,7 @@ function CustomerViewModel(baseUrl) {
                 self.customers(items);
             }),
             function (data) {
-                alert(data.responseText);
+                handleError(data);
             }
     }
 
@@ -55,30 +56,27 @@ function CustomerViewModel(baseUrl) {
                 self.customers.remove(customer);
             },
             function (data) {
-                alert(data.responseText);
+                handleError(data);
             });
     }
 
     self.backToList = function () {
-        self.editVisible(false);
-        self.customer(null);
+        hideEdit();
     }
 
     self.addCustomer = function () {
         var observableCustomer = new ObservableCustomer(0, "", "", "", "", "");
-        self.customer(observableCustomer);
-        self.editVisible(true);
+        showEdit(observableCustomer);
     }
 
     self.editCustomer = function (customer) {
         ajax("GET", "customers/" + customer.id, null,
             function (data) {
                 var observableCustomer = new ObservableCustomer(data.id, data.name, data.surname, data.phoneNumber, data.address, data.version);
-                self.customer(observableCustomer);
-                self.editVisible(true);
+                showEdit(observableCustomer);
             },
             function (data) {
-                alert(data.responseText);
+                handleError(data);
             });
     }
 
@@ -102,20 +100,34 @@ function CustomerViewModel(baseUrl) {
                 url,
                 postOrPutData,
                 function () {
-                    self.editVisible(false);
+                    hideEdit();
                     self.initCustomers();
-                    self.customer(null);
                 },
                 function (data) {
-                    alert(data.responseText);
+                    handleError(data);
                 });
-            
+
         }
     }
 
+    function showEdit(customer) {
+        self.customer(customer);
+        self.editVisible(true);
+    }
+
+    function hideEdit() {
+        self.editVisible(false);
+        self.customer(null);
+    }
+
+
+    function handleError(data) {
+        alert(data.responseText);
+    }
+
     function validateCustomer() {
-        var customer = self.customer(); 
-        var valid = 
+        var customer = self.customer();
+        var valid =
             validateField("Name", 50, false, customer.name, customer.nameValidationText) &
             validateField("Surname", 50, false, customer.surname, customer.surnameValidationText) &
             validateField("Phone number", 50, false, customer.phoneNumber, customer.phoneNumberValidationText) &
@@ -136,7 +148,7 @@ function CustomerViewModel(baseUrl) {
             validationField(fieldName + " is required");
             valid = false;
         }
-        return valid;        
+        return valid;
     }
 
     function ajax(method, endpoint, data, doneFn, failFn) {
