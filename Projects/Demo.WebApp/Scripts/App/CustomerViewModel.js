@@ -16,6 +16,10 @@ function ObservableCustomer(id, name, surname, phoneNumber, address, version) {
     self.phoneNumber = window.ko.observable(phoneNumber);
     self.address = window.ko.observable(address);
     self.version = window.ko.observable(version);
+    self.nameValidationText = window.ko.observable("");
+    self.surnameValidationText = window.ko.observable("");
+    self.phoneNumberValidationText = window.ko.observable("");
+    self.addressValidationText = window.ko.observable("");
 }
 
 
@@ -83,26 +87,47 @@ function CustomerViewModel(baseUrl) {
         var postOrPutData;
         var method;
         var url;
-        if (version === "") {
-            method = "POST";
-            postOrPutData = '{ "name": "' + self.customer().name() + '", "surname": "' + self.customer().surname() + '", "phoneNumber": "' + self.customer().phoneNumber() + '", "address": "' + self.customer().address() + '" }';
-            url = "customers/";
-        } else {
-            method = "PUT";
-            postOrPutData = '{ "name": "' + self.customer().name() + '", "surname": "' + self.customer().surname() + '", "phoneNumber": "' + self.customer().phoneNumber() + '", "address": "' + self.customer().address() + '", "version": "' + self.customer().version() + '" }';
-            url = "customers/" + self.customer().id();
+        var customerIsValid = validateCustomer();
+        if (customerIsValid) {
+            if (version === "") {
+                method = "POST";
+                postOrPutData = '{ "name": "' + self.customer().name() + '", "surname": "' + self.customer().surname() + '", "phoneNumber": "' + self.customer().phoneNumber() + '", "address": "' + self.customer().address() + '" }';
+                url = "customers/";
+            } else {
+                method = "PUT";
+                postOrPutData = '{ "name": "' + self.customer().name() + '", "surname": "' + self.customer().surname() + '", "phoneNumber": "' + self.customer().phoneNumber() + '", "address": "' + self.customer().address() + '", "version": "' + self.customer().version() + '" }';
+                url = "customers/" + self.customer().id();
+            }
+            ajax(method,
+                url,
+                postOrPutData,
+                function () {
+                    self.editVisible(false);
+                    self.initCustomers();
+                    self.customer(null);
+                },
+                function (data) {
+                    alert(data.responseText);
+                });
+            
         }
-        ajax(method,
-            url,
-            postOrPutData,
-            function () {
-                self.editVisible(false);
-                self.initCustomers();
-                self.customer(null);
-            },
-            function (data) {
-                alert(data.responseText);
-            });
+    }
+
+    function validateCustomer() {
+        var valid = true;
+        var customer = self.customer(); 
+        if (customer.name() !== "") {
+            if (customer.name().length >= 50) {
+                customer.nameValidationText("");
+            } else {
+                customer.nameValidationText("Name cannot be longer than 50 chars");
+                valid = false;
+            }
+        } else {
+            customer.nameValidationText("Name is required");
+            valid = false;
+        }
+        return valid;
     }
 
     function ajax(method, endpoint, data, doneFn, failFn) {

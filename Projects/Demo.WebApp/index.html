@@ -37,18 +37,22 @@
             <tr>
                 <td>Name</td>
                 <td><input type="text" data-bind="value: customer().name" /></td>
+                <td><span data-bind="text: customer().nameValidationText"></span></td>
             </tr>
             <tr>
                 <td>Surname</td>
                 <td><input type="text" data-bind="value: customer().surname" /></td>
+                <td><span data-bind="text: customer().surnameValidationText"></span></td>
             </tr>
             <tr>
                 <td>Phone Number</td>
                 <td><input type="text" data-bind="value: customer().phoneNumber" /></td>
+                <td><span data-bind="text: customer().phoneNumberValidationText"></span></td>
             </tr>
             <tr>
                 <td>Address</td>
                 <td><input type="text" data-bind="value: customer().address" /></td>
+                <td><span data-bind="text: customer().addressValidationText"></span></td>
             </tr>
         </table>
         <input type="button" class="btn btn-info" value="Save" data-bind="click: insertOrUpdateCustomer" />
